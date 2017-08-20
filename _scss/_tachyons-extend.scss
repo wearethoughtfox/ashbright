@@ -1,4 +1,71 @@
-@import '_font-family';
-@import '_type-scale';
-@import '_typography';
+//font-family
+body {
+  font-family: 'PT Serif', Georgia, Times, Times New Roman, serif;
+}
 
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+    font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+//_type-scale
+html {
+  font-size: $root-font-size;
+  line-height: $root-line-height;
+}
+
+h1,.f1 { font-size: 2rem; }
+h2,.f2 { font-size: 1.5rem; }
+h3,.f3 { font-size: 1.25rem; }
+h4,.f4 { font-size: 1rem; }
+
+
+//_border-colors
+.b--ashblue { border-color: $link-color; }
+.b--ashgrey { border-color: $border-color; }
+.b--ashdarkgrey { border-color: $body-color; }
+
+//_skins
+.ashblue { color: $link-color; }
+.ashgrey { color: $border-color; }
+
+.bg-ashblue { background-color: $link-color; }
+.bg-ashgrey { background-color: $border-color; }
+
+//_typography
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  line-height: 1.25;
+  color: #313131;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.0625em;
+}
+
+//_max-widths
+.mw4-5  {  max-width: 12rem; }
