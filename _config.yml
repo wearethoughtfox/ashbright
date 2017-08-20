@@ -1,4 +1,4 @@
-name: Your New Jekyll Site
+name: Ashbright
 markdown: kramdown
-highlighter: pygments #
+highlighter: rouge #
 exclude: ["node_modules", "gulpfile.js", "package.json"]
