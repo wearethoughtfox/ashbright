@@ -32,7 +32,9 @@ gulp.task("deploy", ["jekyll-build"], function () {
 ```
 
 ## Based on jekyll-gulp-sass-browser-sync and Tachyons
-https://medium.com/@simonswiss/full-re-write-in-10-days-with-tachyons-and-functional-css-a-case-study-part-4-b565745ca1e5
+- https://medium.com/@simonswiss/full-re-write-in-10-days-with-tachyons-and-functional-css-a-case-study-part-4-b565745ca1e5
+- https://github.com/shakyShane/jekyll-gulp-sass-browser-sync
+- https://aaronlasseigne.com/2016/02/03/using-gulp-with-jekyll/
 
 - Use variables to customise
 - Don't touch the main Tachyons folder
@@ -50,6 +52,7 @@ https://medium.com/@simonswiss/full-re-write-in-10-days-with-tachyons-and-functi
 - https://www.netlify.com
 - https://macwright.org/2017/05/08/https.html
 
+## Examples
 - https://ashbrightcom.wordpress.com/about/
 - http://www.iridiumadvisors.com/#welcome
 - https://www.schillingspartners.com
