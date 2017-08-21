@@ -39,6 +39,11 @@ h4,.f4 { font-size: 1rem; }
 .bg-ashblue { background-color: $link-color; }
 .bg-ashgrey { background-color: $border-color; }
 
+//skins-pseudo
+
+.hover-ashblue:hover { color: $link-color; }
+.hover-ashblue:focus { color: $link-color; }
+
 //_typography
 html,
 body {
