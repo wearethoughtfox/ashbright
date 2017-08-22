@@ -2,3 +2,10 @@ name: Ashbright
 markdown: kramdown
 highlighter: rouge #
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+# Setup
+title:               Ashbright
+tagline:             Strategic communications
+url:                 http://ashbright.com
+baseurl:             /
+
