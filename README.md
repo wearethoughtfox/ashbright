@@ -15,8 +15,14 @@ $ gulp
 As this is just a Jekyll project, you can use any of the commands listed in their [docs](http://jekyllrb.com/docs/usage/)
 
 ```
-jekyll serve --watch --incremental --baseurl ""
+jekyll serve --watch --incremental
 ```
+
+To solve:
+
+- Wrap everything in Gulp command
+- Jekyll base url
+
 
 ## Deploy with Gulp
 
@@ -53,6 +59,10 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - https://www.netlifycms.org
 - https://macwright.org/2017/05/08/https.html
 - https://zengabor.github.io/zenscroll/#howtouse
+- https://realfavicongenerator.net
+
+## Images
+Lighthouses, Fountain pens, Chess boards.
 
 ## Examples
 - https://ashbrightcom.wordpress.com/about/
