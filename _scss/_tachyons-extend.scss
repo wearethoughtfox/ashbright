@@ -26,6 +26,10 @@ h2,.f2 { font-size: 1.5rem; }
 h3,.f3 { font-size: 1.25rem; }
 h4,.f4 { font-size: 1rem; }
 
+@media #{$breakpoint-not-small} {
+  .f-head-ns { font-size: 3rem; }
+  .f-sub-ns { font-size: 2rem; }
+}
 
 //_border-colors
 .b--ashblue { border-color: $link-color; }
