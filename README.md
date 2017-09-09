@@ -48,18 +48,13 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - To customise, create a file with the same name and import into tachyons-extend
 
 ## Notes
-- Nav: https://24ways.org/2014/responsive-enhancement/
-- Nav from config
-- layouts and includes
 - Social sharing stuff
-- Icons
 - Accessibility: http://a11yproject.com/checklist.html
 - https://stayintech.com/info/UX
 - https://www.netlify.com
 - https://www.netlifycms.org
 - https://macwright.org/2017/05/08/https.html
-- https://zengabor.github.io/zenscroll/#howtouse
-- https://realfavicongenerator.net
+- Replace gulp https://github.com/RobertDeRose/jekyll-livereload
 
 ## Images
 Lighthouses, Fountain pens, Chess boards.
@@ -68,7 +63,6 @@ Lighthouses, Fountain pens, Chess boards.
 - https://ashbrightcom.wordpress.com/about/
 - http://www.iridiumadvisors.com/#welcome
 - https://www.schillingspartners.com
-- http://tachyons.io/components/headers/startup-hero/index.html
 
 
 

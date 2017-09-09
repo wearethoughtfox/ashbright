@@ -1,7 +1,8 @@
 ---
 layout: bio
+title: Rupert Wright
 bio-name: Rupert Wright
-title: Chairman
+bio-title: Chairman
 image: GraceHopper.jpg
 slug: rupert-wright
 ---

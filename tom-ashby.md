@@ -1,7 +1,8 @@
 ---
 layout: bio
+title: Tom Ashby
 bio-name: Tom Ashby
-title: Founder and CEO
+bio-title: Founder and CEO
 image: GraceHopper.jpg
 slug: tom-ashby
 ---
