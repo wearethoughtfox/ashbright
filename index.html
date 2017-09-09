@@ -13,9 +13,9 @@ title: Home
         </a>
         <div class="db dtc-l v-mid v-bottom-l w-100 w-75-l tc tr-l">
           <a class="ash-sans link hover-ashblue no-underline white f6 f5-l dib mr3 mr4-l ttu" href="{{ site.baseurl }}/" title="Home">Home</a>
-          <a class="ash-sans hover-ashblue no-underline white f6 f5-l dib mr3 mr4-l ttu"  href="#about" title="About">About</a>
-          <a class="ash-sans hover-ashblue no-underline white f6 f5-l dib mr3 mr4-l ttu"  href="#situations" title="Situations">Situations</a>
-          <a class="ash-sans hover-ashblue no-underline white f6 f5-l dib mr3 mr4-l ttu" href="#contact" title="Contact">Contact</a>
+          <a class="ash-sans hover-ashblue no-underline white f6 f5-l dib mr3 mr4-l ttu about" href="#about" title="About">About</a>
+          <a class="ash-sans hover-ashblue no-underline white f6 f5-l dib mr3 mr4-l ttu situations" href="#situations" title="Situations">Situations</a>
+          <a class="ash-sans hover-ashblue no-underline white f6 f5-l dib mr3 mr4-l ttu contact" href="#contact" title="Contact">Contact</a>
         </div>
       </nav>
 
@@ -28,7 +28,7 @@ title: Home
   </div>
 </header>
 
-<section id="why" class="mw7-ns center ph2 pb4 pb5-ns pa3-l ph5-ns pb5-l pt5-ns">
+<section id="why" class="mw7-ns center ph2 pv4 pb4 pv5-ns ph5-ns ph3-l">
   <h2 class="f1 ph2 ph4-l ashblue ttu">Why are we here</h2>
 
   <p class="f3 ph2 ph4-l lh-copy mt2">The explosion of information and data makes new demands on all of us every day, especially those in leadership positions who must engage externally as much as they direct their own organisations.</p>
@@ -59,7 +59,7 @@ title: Home
 </section>
 
 
-<section id="situations" class="mw7-ns center ph2 pv5-l ph5-ns ph4-l">
+<section id="situations" class="mw7-ns center ph2 pv4 pv5-l ph5-ns ph4-l">
   <h2 class="f1 ph2 ph0-ns ashblue mb3-ns ttu">Situations</h2>
   <article>
     <a class="db pv1 ph2 ph0-l no-underline black dim" href="#0">
@@ -124,3 +124,27 @@ title: Home
     </a>
   </article>
 </section>
+
+<script>
+
+"use strict";function scrollIt(e){function n(){var e="now"in window.performance?performance.now():(new Date).getTime(),c=Math.min(1,(e-a)/t),m=o[u](c);return window.scroll(0,Math.ceil(m*(d-i)+i)),window.pageYOffset===d?void(r&&r()):void requestAnimationFrame(n)}var t=arguments.length<=1||void 0===arguments[1]?200:arguments[1],u=arguments.length<=2||void 0===arguments[2]?"linear":arguments[2],r=arguments[3],o={linear:function(e){return e},easeInQuad:function(e){return e*e},easeOutQuad:function(e){return e*(2-e)},easeInOutQuad:function(e){return.5>e?2*e*e:-1+(4-2*e)*e},easeInCubic:function(e){return e*e*e},easeOutCubic:function(e){return--e*e*e+1},easeInOutCubic:function(e){return.5>e?4*e*e*e:(e-1)*(2*e-2)*(2*e-2)+1},easeInQuart:function(e){return e*e*e*e},easeOutQuart:function(e){return 1- --e*e*e*e},easeInOutQuart:function(e){return.5>e?8*e*e*e*e:1-8*--e*e*e*e},easeInQuint:function(e){return e*e*e*e*e},easeOutQuint:function(e){return 1+--e*e*e*e*e},easeInOutQuint:function(e){return.5>e?16*e*e*e*e*e:1+16*--e*e*e*e*e}},i=window.pageYOffset,a="now"in window.performance?performance.now():(new Date).getTime(),c=Math.max(document.body.scrollHeight,document.body.offsetHeight,document.documentElement.clientHeight,document.documentElement.scrollHeight,document.documentElement.offsetHeight),m=window.innerHeight||document.documentElement.clientHeight||document.getElementsByTagName("body")[0].clientHeight,s="number"==typeof e?e:e.offsetTop,d=Math.round(m>c-s?c-m:s);return"requestAnimationFrame"in window==!1?(window.scroll(0,d),void(r&&r())):void n()}
+
+// Scroll to about
+document.querySelector('.about').addEventListener('click', function () {
+  scrollIt(document.querySelector('#about'), 300, 'easeOutQuad');
+});
+
+// Scroll to situations
+document.querySelector('.situations').addEventListener('click', function () {
+  scrollIt(document.querySelector('#situations'), 300, 'easeOutQuad');
+});
+
+// Scroll to contact
+document.querySelector('.contact').addEventListener('click', function () {
+  scrollIt(document.querySelector('#contact'), 300, 'easeOutQuad');
+});
+
+
+
+</script>
+
