@@ -55,9 +55,19 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - https://www.netlifycms.org
 - https://macwright.org/2017/05/08/https.html
 - Replace gulp https://github.com/RobertDeRose/jekyll-livereload
+https://jekyllrb.com/docs/assets/
 
 ## Images
 Lighthouses, Fountain pens, Chess boards.
+
+## Templates
+- Email signature
+- Business card
+- Letterhead
+- PowerPoint
+- Invoice
+- Briefing note
+
 
 ## Examples
 - https://ashbrightcom.wordpress.com/about/
