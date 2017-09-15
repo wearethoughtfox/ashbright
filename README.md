@@ -54,9 +54,9 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - https://www.netlify.com
 - https://www.netlifycms.org
 - https://macwright.org/2017/05/08/https.html
-- Replace gulp https://github.com/RobertDeRose/jekyll-livereload
-https://jekyllrb.com/docs/assets/
 - https://github.com/filamentgroup/loadCSS
+- Add location to footer
+
 
 ## Images
 Lighthouses, Fountain pens, Chess boards.
