@@ -6,6 +6,5 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 # Setup
 title:               Ashbright
 tagline:             Strategic communications
-url:                 https://wearethoughtfox.github.io/ashbright/
-baseurl:
+url:                 https://www.ashbright.com
 

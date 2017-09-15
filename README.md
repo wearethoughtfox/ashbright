@@ -51,9 +51,7 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - Social sharing stuff
 - Accessibility: http://a11yproject.com/checklist.html
 - https://stayintech.com/info/UX
-- https://www.netlify.com
 - https://www.netlifycms.org
-- https://macwright.org/2017/05/08/https.html
 - https://github.com/filamentgroup/loadCSS
 - Add location to footer
 
