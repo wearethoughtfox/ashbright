@@ -1,5 +1,3 @@
-https://wearethoughtfox.github.io/ashbright/
-
 ## Usage
 
 **development mode**
@@ -53,8 +51,9 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - https://stayintech.com/info/UX
 - https://www.netlifycms.org
 - https://github.com/filamentgroup/loadCSS
-- Add location to footer
-
+- Speed / performance
+- Pageweight
+- WC validation
 
 ## Images
 Lighthouses, Fountain pens, Chess boards.
