@@ -8,3 +8,8 @@ title:               Ashbright
 tagline:             Strategic communications
 url:                 https://www.ashbright.com
 
+collections:
+  situations:
+    output: true
+    permalink: /:collection/:name
+

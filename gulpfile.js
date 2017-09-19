@@ -34,7 +34,8 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
         port: 4000,
         server: {
             baseDir: '_site'
-        }
+        },
+        browser: 'google chrome'
     });
 });
 
@@ -61,7 +62,7 @@ gulp.task('sass', function () {
  */
 gulp.task('watch', function () {
     gulp.watch('_scss/*.scss', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*', '_situations/*'], ['jekyll-rebuild']);
 });
 
 /**

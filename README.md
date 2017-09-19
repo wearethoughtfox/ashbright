@@ -46,14 +46,18 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - To customise, create a file with the same name and import into tachyons-extend
 
 ## Notes
-- Social sharing stuff
+- Social sharing stuff: https://jekyll.github.io/jekyll-seo-tag/
 - Accessibility: http://a11yproject.com/checklist.html
 - https://stayintech.com/info/UX
 - https://www.netlifycms.org
-- https://github.com/filamentgroup/loadCSS
 - Speed / performance
 - Pageweight
 - WC validation
+
+## To do
+- Situations
+- Images
+- Critical CSS
 
 ## Images
 Lighthouses, Fountain pens, Chess boards.

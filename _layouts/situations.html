@@ -4,16 +4,11 @@ layout: default
 
 {% include header.html %}
 
-  <div class="vh-100 dt w-100 tc bg-dark-gray white cover" style="background:url(http://mrmrs.github.io/photos/u/009.jpg) no-repeat center;">
+  <div class="vh-100 dt w-100 tc bg-dark-gray white cover" style="background:url({{ site.baseurl }}/images/{{ page.image }}) no-repeat center;">
     <div class="dtc v-mid">
-      <h1 class="f1 f1-l fw2 white-90 mb0 lh-title ttu">{{ page.title }}</h1>
-      <p class="fw1 f3 white-80 mt1 mb3">
-          {{ page.excerpt }}
-        </p>
-      </blockquote>
+      <h1 class="f-head f-head-ns fw2 white-90 mb0 lh-title ttu">{{ page.title }}</h1>
     </div>
   </div>
   <div class="center measure-wide f5 pv5 lh-copy ph2">
-    <h2 class="f1 ashblue ttu">{{ page.header }}</h2>
     {{ content }}
   </div>
