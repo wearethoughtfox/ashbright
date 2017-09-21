@@ -2,7 +2,7 @@
 layout: situations
 title: Crisis management
 slug: crisis-management
-image: Storm_Clouds_-_License_for_£37_20_on_Picfair.png
+image: crisis
 excerpt: You will not be judged by the crises you face, but how you manage them. Ashbright has leadership experience in managing crises including restructuring, succession and fatalities.
 categories: situations
 date:   2017-01-06

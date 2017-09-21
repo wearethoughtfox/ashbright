@@ -4,11 +4,14 @@ layout: default
 
 {% include header.html %}
 
-  <div class="vh-100 dt w-100 tc bg-dark-gray white cover" style="background:url({{ site.baseurl }}/images/{{ page.image }}) no-repeat center;">
-    <div class="dtc v-mid">
-      <h1 class="f-head f-head-ns fw2 white-90 mb0 lh-title ttu">{{ page.title }}</h1>
+<header>
+  <div class="cover bg-left bg-center-l vh-75 dt w-100" style="background-image: url({{ site.baseurl }}/images/{{ page.image }}.jpg)">
+    <div class="bg-black-40 dtc v-mid tc">
+        <h1 class="f-head f-head-ns fw2 white-90 mb0 lh-title ttu">{{ page.title }}</h1>
     </div>
   </div>
-  <div class="center measure-wide f5 pv5 lh-copy ph2">
+</header>
+
+  <div class="center measure-wide f3 pv5-l lh-copy ph2">
     {{ content }}
   </div>
