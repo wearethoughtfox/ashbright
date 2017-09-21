@@ -50,9 +50,6 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - Accessibility: http://a11yproject.com/checklist.html
 - https://stayintech.com/info/UX
 - https://www.netlifycms.org
-- Speed / performance
-- Pageweight
-- WC validation
 
 ## To do
 - Images
