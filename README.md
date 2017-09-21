@@ -55,9 +55,9 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - WC validation
 
 ## To do
-- Situations
 - Images
 - Critical CSS
+- Google Analytics
 
 ## Images
 Lighthouses, Fountain pens, Chess boards.
