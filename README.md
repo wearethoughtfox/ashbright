@@ -56,7 +56,6 @@ gulp.task("deploy", ["jekyll-build"], function () {
 
 ## To do
 - Images
-- Critical CSS
 - Google Analytics
 
 ## Images
