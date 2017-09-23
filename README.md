@@ -57,22 +57,10 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - Images
   1. https://www.picfair.com/pics/0129601-yan-an-middle-east-crossing
 
-- related situations below
-
 ## Templates
-- Email signature
-- Business card
-- Letterhead
-
 - PowerPoint
 - Invoice
 - Briefing note
-
-
-## Examples
-- https://ashbrightcom.wordpress.com/about/
-- http://www.iridiumadvisors.com/#welcome
-- https://www.schillingspartners.com
 
 
 

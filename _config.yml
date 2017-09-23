@@ -1,6 +1,6 @@
 name: Ashbright
 markdown: kramdown
-highlighter: rouge #
+highlighter: rouge
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 # Setup
