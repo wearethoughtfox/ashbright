@@ -46,7 +46,6 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - To customise, create a file with the same name and import into tachyons-extend
 
 ## Notes
-- Social sharing stuff: https://jekyll.github.io/jekyll-seo-tag/
 - Accessibility: http://a11yproject.com/checklist.html
 - Stuctured data for address
 - https://stayintech.com/info/UX
