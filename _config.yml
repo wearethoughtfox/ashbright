@@ -5,11 +5,15 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 # Setup
 title:               Ashbright
-tagline:             Strategic communications
+description:         Strategic communication
+tagline:             Strategic communication
 url:                 https://www.ashbright.com
+logo:                images/LOGO-RGB.png
 
 collections:
   situations:
     output: true
     permalink: /:collection/:name
 
+plugins:
+  - jekyll-seo-tag
