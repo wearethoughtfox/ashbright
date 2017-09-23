@@ -12,6 +12,37 @@ layout: default
   </div>
 </header>
 
-  <div class="center measure-wide f3 pv5-l lh-copy ph2">
+  <div class="measure-wide center f3 pv4-l lh-copy ph3 mt4">
     {{ content }}
+   </div>
+
+    <div class="pv4 pl3 mw6 mw7-ns center tc-ns">
+      <a class="ash-sans f5 f3-ns link dim ph3 ph4-l pv2 mb4 mr3-ns dib white bg-ashblue ttu tracked" href="mailto:ta@ashbright.com">Get in touch</a>
+
+      <a class="ash-sans f5 f3-ns link dim ph3 ph4-l pv2 mb4 ml3-ns dib white bg-ashdarkgrey ttu tracked" href="tel:+971502206916">+971 50 220 6916</a>
+    </div>
+
+
+  <div class="cf mw8 center ph3 pt3-l">
+    {% for situation in site.situations %}
+     {% if situation.url != page.url %}
+
+     <div class='fl w-100 w-50-m w-33-l'>
+       <article class="bg-white mw7 mb3 fl mh2-ns">
+        <a href="{{ situation.url }}" class="db pv1 ph0-l no-underline black dim">
+          <img src="{{ site.baseurl }}/images/{{ situation.image }}-thumb.jpg" class="w-100 db" alt="{{ situation.title }}">
+          <div class="pb3 pl1">
+            <h2 class="f2 ashblue ttu">{{ situation.title }}</h2>
+          </div>
+        </a>
+      </article>
+     </div>
+
+     {% endif %}
+    {% endfor %}
   </div>
+
+
+
+
+

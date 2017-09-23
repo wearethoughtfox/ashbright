@@ -13,6 +13,11 @@ h4,
     font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
 //_type-scale
 html {
   font-size: $root-font-size;
@@ -105,3 +110,12 @@ h3 {
 
 //_max-widths
 .mw4-5  {  max-width: 12rem; }
+
+// columns
+
+.col2 {
+  column-count: 2;
+  column-gap: 2em;
+}
+
+

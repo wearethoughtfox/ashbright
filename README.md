@@ -48,15 +48,16 @@ gulp.task("deploy", ["jekyll-build"], function () {
 ## Notes
 - Social sharing stuff: https://jekyll.github.io/jekyll-seo-tag/
 - Accessibility: http://a11yproject.com/checklist.html
+- Stuctured data for address
 - https://stayintech.com/info/UX
 - https://www.netlifycms.org
+- Sitemap
 
 ## To do
 - Images
-- Google Analytics
+  1. https://www.picfair.com/pics/0129601-yan-an-middle-east-crossing
 
-## Images
-Lighthouses, Fountain pens, Chess boards.
+- related situations below
 
 ## Templates
 - Email signature
