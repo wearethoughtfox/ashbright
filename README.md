@@ -49,11 +49,14 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - Accessibility: http://a11yproject.com/checklist.html
 - https://stayintech.com/info/UX
 - https://www.netlifycms.org
+- https://github.com/giakki/uncss
 
 ## To do
 - Images
   1. Where do I start? https://www.picfair.com/pics/0129601-yan-an-middle-east-crossing
   2. Work smarter
+
+
 
 
 
