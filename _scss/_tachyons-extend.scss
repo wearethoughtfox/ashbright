@@ -118,4 +118,6 @@ h3 {
   column-gap: 2em;
 }
 
-
+.bio-content p {
+  @extend .pb3;
+}
