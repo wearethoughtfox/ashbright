@@ -52,9 +52,7 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - https://github.com/giakki/uncss
 
 ## To do
-- Images
-  1. Where do I start? https://www.picfair.com/pics/0129601-yan-an-middle-east-crossing
-  2. Work smarter
+- Add scroll animation https://github.com/michalsnik/aos
 
 
 
