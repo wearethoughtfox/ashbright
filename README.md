@@ -53,6 +53,8 @@ gulp.task("deploy", ["jekyll-build"], function () {
 
 ## To do
 - Add scroll animation https://github.com/michalsnik/aos
+- Netlify
+- Image gulp process workflow
 
 
 
