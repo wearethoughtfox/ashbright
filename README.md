@@ -45,6 +45,18 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - Comment partials that you don't need in the master Tachyons file
 - To customise, create a file with the same name and import into tachyons-extend
 
+## SEO tags
+Provided by https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+
+## Animation on scroll examples
+https://codepen.io/michalsnik/pen/WxNdvq
+
+## Smooth scroll
+https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
+
+## Scroll to top button
+https://www.shareicon.net/arrow-up-app-ui-essential-884106
+
 ## Notes
 - Accessibility: http://a11yproject.com/checklist.html
 - https://stayintech.com/info/UX
@@ -52,9 +64,9 @@ gulp.task("deploy", ["jekyll-build"], function () {
 - https://github.com/giakki/uncss
 
 ## To do
-- Add scroll animation https://github.com/michalsnik/aos
 - Netlify
 - Image gulp process workflow
+- Scroll to top
 
 
 
