@@ -66,7 +66,6 @@ https://www.shareicon.net/arrow-up-app-ui-essential-884106
 ## To do
 - Netlify
 - Image gulp process workflow
-- Scroll to top
 
 
 
