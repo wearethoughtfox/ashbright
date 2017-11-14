@@ -4,7 +4,7 @@ layout: default
 
 {% include header.html %}
 
-<header id="top">
+<header>
   <div class="cover bg-left bg-center-l vh-75 dt w-100" style="background-image: url({{ site.baseurl }}/{{ page.image }})">
     <div class="bg-black-40 dtc v-mid tc">
         <h1 class="f-head f-head-ns white-90 mb0 lh-title ttu">{{ page.title }}</h1>
@@ -23,7 +23,7 @@ layout: default
     </div>
 
 
-  <div class="cf mw8 center ph3 pt3-l">
+  <div class="cf mw8 center ph3 pt3-l" id="fadein-backtotop">
     {% for situation in site.situations %}
      {% if situation.url != page.url %}
 
