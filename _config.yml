@@ -19,3 +19,10 @@ collections:
 
 plugins:
   - jekyll-seo-tag
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/LOGO-RGB.png
