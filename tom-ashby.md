@@ -3,7 +3,7 @@ layout: bio
 title: Tom Ashby
 bio-name: Tom Ashby
 bio-title: Founder and CEO
-image: tom-ashby-square-web.jpg
+image: images/tom-ashby-square-web.jpg
 slug: tom-ashby
 ---
 

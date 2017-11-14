@@ -3,7 +3,7 @@ layout: bio
 title: Rupert Wright
 bio-name: Rupert Wright
 bio-title: Chairman
-image: tom-ashby-square-web.jpg
+image: images/rupert-wright-square-web.jpg
 slug: rupert-wright
 ---
 

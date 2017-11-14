@@ -58,7 +58,6 @@ https://pawelgrzybek.com/page-scroll-in-vanilla-javascript/
 https://www.shareicon.net/arrow-up-app-ui-essential-884106
 
 ## Notes
-- Accessibility: http://a11yproject.com/checklist.html
 - https://stayintech.com/info/UX
 - https://www.netlifycms.org
 - https://github.com/giakki/uncss
@@ -66,6 +65,8 @@ https://www.shareicon.net/arrow-up-app-ui-essential-884106
 ## To do
 - Netlify
 - Image gulp process workflow
+- Accessibility: http://a11yproject.com/checklist.html
+- Get permalinks working locally - no .html
 
 
 
