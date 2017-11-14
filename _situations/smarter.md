@@ -1,7 +1,8 @@
 ---
 layout: situations
 title: Work smarter
-image: smarter
+image: images/smarter.jpg
+thumbnail: images/smarter-thumb.jpg
 description: As a leader in your organisation, your most precious resource is time. Ashbright can make your critical meetings and public appearances more effective through intelligence, monitoring, training and reporting.
 date:   2017-01-02
 ---

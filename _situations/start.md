@@ -1,7 +1,8 @@
 ---
 layout: situations
 title: Where do I start?
-image: start
+image: images/start.jpg
+thumbnail: images/start-thumb.jpg
 description: The forces of disruption and complexity demand high-level communications awareness from leaders. Ashbright builds state-of-the-art communications functions, helping leaders to gather intelligence and communicate effectively in an increasingly complex world.
 date:   2017-01-01
 ---

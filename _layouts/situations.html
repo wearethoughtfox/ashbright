@@ -5,7 +5,7 @@ layout: default
 {% include header.html %}
 
 <header>
-  <div class="cover bg-left bg-center-l vh-75 dt w-100" style="background-image: url({{ site.baseurl }}/images/{{ page.image }}.jpg)">
+  <div class="cover bg-left bg-center-l vh-75 dt w-100" style="background-image: url({{ site.baseurl }}/{{ page.image }})">
     <div class="bg-black-40 dtc v-mid tc">
         <h1 class="f-head f-head-ns white-90 mb0 lh-title ttu">{{ page.title }}</h1>
     </div>
@@ -30,7 +30,7 @@ layout: default
      <div class='fl w-100 w-50-m w-33-l'>
        <article class="bg-white mw7 mb3 fl mh2-ns">
         <a href="{{ situation.url }}" class="db pv1 ph0-l no-underline black dim">
-          <img src="{{ site.baseurl }}/images/{{ situation.image }}-thumb.jpg" class="w-100 db" alt="{{ situation.title }}">
+          <img src="{{ site.baseurl }}/{{ situation.thumbnail }}" class="w-100 db" alt="{{ situation.title }}">
           <div class="pb3 pl1">
             <h2 class="f2 ashblue ttu">{{ situation.title }}</h2>
           </div>

@@ -1,7 +1,8 @@
 ---
 layout: situations
 title: Marketing communication
-image: marketing
+image: images/marketing.jpg
+thumbnail: images/marketing-thumb.jpg
 description: A great product or service can still fail to hit targets without an effective communications campaign. Our programmes comprise research and strategy, content development and deployment to ensure that your products and services get the attention they deserve.
 categories: situations
 date:   2017-01-05

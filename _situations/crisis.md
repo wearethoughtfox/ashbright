@@ -2,7 +2,8 @@
 layout: situations
 title: Crisis management
 slug: crisis-management
-image: crisis
+image: images/crisis.jpg
+thumbnail: images/crisis-thumb.jpg
 description: You will not be judged by the crises you face, but how you manage them. Ashbright has leadership experience in managing crises including restructuring, succession and fatalities.
 categories: situations
 date:   2017-01-06

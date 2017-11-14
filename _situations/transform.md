@@ -1,7 +1,8 @@
 ---
 layout: situations
 title: Transformation
-image: transformation
+image: images/transformation.jpg
+thumbnail: images/transformation-thumb.jpg
 description: Poor communication is one of the main causes of failure in change programmes. Ashbright works alongside CEOs and management consultants to ensure change programmes succeed.
 date:   2017-01-03
 ---

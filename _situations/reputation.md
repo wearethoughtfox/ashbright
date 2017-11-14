@@ -1,7 +1,8 @@
 ---
 layout: situations
 title: Reputation matters
-image: reputation
+image: images/reputation.jpg
+thumbnail: images/reputation-thumb.jpg
 description: As a high-profile individual, your reputation is a priceless asset. Ashbright has decades of experience helping successful individuals and business leaders manage their reputation, online and offline.
 date:   2017-01-04
 ---
