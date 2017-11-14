@@ -11,8 +11,9 @@
     <p class="f4 lh-copy pb4 pb0-l mr5-l tr-l">ASHBRIGHT DWC-LLC, PO Box 712472, Dubai, UAE</p>
   </div>
 
-  <a href="#" class="back-to-top">
-    <img src="{{{{ site.baseurl }}/images/arrow.svg"></i>
+  <a href="#" class="back-to-top fixed bottom-1 right-1" data-aos="fade-left"
+     data-aos-anchor="#fadein-backtotop">
+    <img src="{{ site.baseurl }}/images/arrow.svg" class="di w3" alt="Scroll to top button"></i>
   </a>
 </footer>
 
@@ -34,6 +35,11 @@ document.querySelector('.situations').addEventListener('click', function () {
 // Scroll to contact
 document.querySelector('.contact').addEventListener('click', function () {
   scrollIt(document.querySelector('#contact'), 300, 'easeOutQuad');
+});
+
+// Scroll to top
+document.querySelector('.back-to-top').addEventListener('click', function () {
+  scrollIt(document.querySelector('#top'), 300, 'easeOutQuad');
 });
 
 // Animation scrolling
