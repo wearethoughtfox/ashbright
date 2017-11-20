@@ -1,5 +1,5 @@
 ---
-layout: situations
+layout: situation
 title: Reputation matters
 image: images/reputation.jpg
 thumbnail: images/reputation-thumb.jpg

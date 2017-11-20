@@ -23,7 +23,13 @@ description: Strategic communication
       <div class="mt4 mt6-ns mt7-l ph3 tc tl-l ml4-l">
         <h1 class="f-head f-head-ns fw4 white-90 mb0 lh-title ttu">Strategic communication</h1>
         <p class="f3 f-sub-ns fw1 white-80 mt1 mb3 i">Informing intelligent leadership</p>
-        <a class="ash-sans f5 f3-ns link dim ph3 ph4-l pv2 mb5 mb6-ns mb4-l dib white bg-ashblue ttu tracked" href="mailto:ta@ashbright.com">Get in touch</a>
+        <span itemscope itemtype="http://schema.org/Corporation">
+          <span class="dn" itemprop="name">{{ site.name }}</span>
+            <span itemprop="email">
+              <a class="ash-sans f5 f3-ns link dim ph3 ph4-l pv2 mb4 mr3-ns dib white bg-ashblue ttu tracked" href="mailto:{{ site.email }}">{{ site.calltoaction }}</a>
+            </span>
+         </span>
+        </span>
       </div>
     </div>
   </div>

@@ -1,5 +1,5 @@
 ---
-layout: situations
+layout: situation
 title: Where do I start?
 image: images/start.jpg
 thumbnail: images/start-thumb.jpg

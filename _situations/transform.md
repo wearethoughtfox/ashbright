@@ -1,5 +1,5 @@
 ---
-layout: situations
+layout: situation
 title: Transformation
 image: images/transformation.jpg
 thumbnail: images/transformation-thumb.jpg

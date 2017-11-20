@@ -1,5 +1,5 @@
 ---
-layout: situations
+layout: situation
 title: Marketing communication
 image: images/marketing.jpg
 thumbnail: images/marketing-thumb.jpg

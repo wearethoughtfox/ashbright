@@ -1,5 +1,5 @@
 ---
-layout: situations
+layout: situation
 title: Work smarter
 image: images/smarter.jpg
 thumbnail: images/smarter-thumb.jpg

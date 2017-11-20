@@ -1,5 +1,5 @@
 ---
-layout: situations
+layout: situation
 title: Crisis management
 image: images/crisis.jpg
 thumbnail: images/crisis-thumb.jpg
