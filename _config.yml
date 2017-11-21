@@ -5,7 +5,7 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 
 # Setup
 title:               Ashbright
-description:         "We are strategic communications firm that provides counsel to governments, companies and successful individuals."
+description:         'We are strategic communications firm that provides counsel to governments, companies and successful individuals.'
 tagline:             Strategic communication
 url:                 https://www.ashbright.com
 logo:                /images/LOGO-RGB.png
