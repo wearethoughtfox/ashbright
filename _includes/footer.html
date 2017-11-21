@@ -3,9 +3,8 @@
   <div id="contact" class="mw6 mw7-ns center pt4 tc fr-l pr5-l">
     <span itemscope itemtype="http://schema.org/Corporation">
       <span class="dn" itemprop="name">{{ site.name }}</span>
-      <span itemprop="email">
         <a class="ash-sans f5 f3-ns link dim ph3 ph4-l pv2 mb4 mr3-ns dib white bg-black ttu tracked" href="mailto:{{ site.email }}">Get in touch</a>
-      </span>
+        <meta itemprop="email" content="{{ site.email }}">
       <span itemprop="telephone">
         <a class="ash-sans f5 f3-ns link dim ph3 ph4-l pv2 mb4 ml3-ns dib white bg-ashdarkgrey ttu tracked" href="tel:{{ site.tel }}">{{ site.tel }}</a>
       </span>
