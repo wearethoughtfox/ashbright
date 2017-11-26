@@ -57,7 +57,7 @@ https://www.shareicon.net/arrow-up-app-ui-essential-884106
 ## To do
 - Netlify
 - Image gulp process workflow
-- Accessibility: http://a11yproject.com/checklist.html
+- Accessibility: http://a11yproject.com/checklist.html / http://pa11y.org
 - Get permalinks working locally - no .html
 
 
