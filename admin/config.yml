@@ -53,5 +53,5 @@ collections: # A list of collections the CMS should be able to edit
           - {label: "Site description", name: "description", widget: "string"}
           - {label: "Site tagline", name: "tagline", widget: "string"}
           - {label: "Site email", name: "email", widget: "string"}
-          - {label: "Site telephone", name: "tagline", widget: "string"}
+          - {label: "Site telephone", name: "tel", widget: "string"}
           - {label: "Site call to action", name: "calltoaction", widget: "string"}
