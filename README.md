@@ -18,7 +18,6 @@ To solve:
 - Wrap everything in Gulp command
 - Jekyll base url
 
-
 ## Netlify set up
 To install on Netlify, follow these instructions:
 - https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/#netlifystart
