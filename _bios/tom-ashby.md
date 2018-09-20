@@ -5,7 +5,9 @@ image: images/tom-ashby-square-web.jpg
 bio-name: Tom Ashby
 bio-title: Founder and CEO
 ---
-Tom is a strategic communications advisor with a background in global media. He has experience in a wide range of government and business sectors, including royal courts, sovereign wealth funds, private equity, capital markets, real estate, financial services, defence and the global energy industry. He is an expert in providing strategic counsel, building and leading communications functions, creating strategies and designing campaigns, especially at times of crisis and change. He is an expert writer and editor and sits on the Board of the Middle East Public Relations Association. 
+Tom is a strategic communications advisor with a background in global media.
+
+He has experience in a wide range of government and business sectors, including royal courts, sovereign wealth funds, private equity, capital markets, real estate, financial services, defence and the global energy industry. He is an expert in providing strategic counsel, building and leading communications functions, creating strategies and designing campaigns, especially at times of crisis and change. He is an expert writer and editor and sits on the Board of the Middle East Public Relations Association.
 
 Tom has been involved in several successful startups in investor relations, communications and technology. In 2018, he completed a Certificate in Big Data and Social Analytics at Massachusetts Institute of Technology (MIT) and also successfully completed the Oxford Fintech Programme at the Said Business School at the University of Oxford.
 
