@@ -25,6 +25,7 @@ To install on Netlify, follow these instructions:
 - https://www.netlifycms.org/docs/intro/
 - https://www.netlifycms.org/docs/editorial-workflow/
 - Use Github for authentication https://www.netlify.com/docs/authentication-providers/#using-an-authentication-provider
+- Add Netlify identity widget as a snippet in Build & Deploy > Post processing
 
 ## Based on jekyll-gulp-sass-browser-sync and Tachyons
 - https://medium.com/@simonswiss/full-re-write-in-10-days-with-tachyons-and-functional-css-a-case-study-part-4-b565745ca1e5
