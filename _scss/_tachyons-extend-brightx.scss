@@ -1,0 +1,16 @@
+//_border-colors
+.b--brightxred { border-color: $link-color1; }
+.b--brightxdarkgrey { border-color: $border-color1; }
+.b--brightxlightgrey { border-color: $grey1; }
+.b--brightxmidgrey { border-color: $grey2; }
+
+//_skins
+.brightxred { color: $link-color1; }
+.brightxdarkgrey { color: $border-color1; }
+.brightxlightgrey { color: $grey1; }
+.brightxmidgrey { color: $grey2; }
+
+.bg-brightxred { background-color: $link-color1; }
+.bg-brightxdarkgrey { background-color: $border-color1; }
+.bg-brightxlightgrey { background-color: $grey1; }
+.bg-brightxmidgrey { background-color: $grey2; }
