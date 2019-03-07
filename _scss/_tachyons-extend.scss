@@ -3,13 +3,7 @@ body {
   font-family: 'PT Serif', Georgia, Times, Times New Roman, serif;
 }
 
-h1,.h1,
-h2,.h2,
-h3,
-.h3,
-h4,
-.h4,
-.ash-sans {
+h1,h2,h3,h4,.ash-sans {
     font-family: 'Oswald', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
@@ -58,7 +52,6 @@ h4,.f4 { font-size: 1rem; }
   .f3-l { font-size: 1.25rem; }
   .f4-l { font-size: 1rem; }
 }
-
 
 //_border-colors
 .b--ashblue { border-color: $link-color; }
