@@ -1,3 +1,18 @@
+.brightx h1,
+.brightx h2,
+.brightx h3,
+.brightx h4,
+.brightx-sans,
+.brightx p,
+.brightx li {
+    font-family: 'Montserrat', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.text {
+  color: #231f20;
+}
+
+
 //_border-colors
 .b--brightxred { border-color: $link-color1; }
 .b--brightxdarkgrey { border-color: $border-color1; }
@@ -14,3 +29,40 @@
 .bg-brightxdarkgrey { background-color: $border-color1; }
 .bg-brightxlightgrey { background-color: $grey1; }
 .bg-brightxmidgrey { background-color: $grey2; }
+
+.line-before, .line-after {
+  overflow: hidden;
+}
+
+.line-after:after {
+    content:"";
+    display: inline-block;
+    height: 0.6em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 0.5em;
+    border-top: 3px solid $border-color1;
+}
+
+.line-before:before {
+    content:"";
+    display: inline-block;
+    height: 0.6em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 0.5em;
+    border-top: 3px solid $border-color1;
+}
+
+.vertical-text {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  grid-column: 1 / 2;
+  margin: 0 1rem 1rem 0;
+  text-align: right;
+}

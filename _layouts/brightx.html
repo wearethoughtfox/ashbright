@@ -4,31 +4,13 @@
   {% include head-brightx.html %}
 
   <body>
-    <main>
+    <main class="brightx">
       {{ content }}
     </main>
 
   {% include footer-brightx.html %}
 
-  <!-- Start of HubSpot Embed Code -->
-  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4391646.js"></script>
-  <!-- End of HubSpot Embed Code -->
-
-  <!-- Start of Netlify admin code -->
-  <script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", function (user) {
-      if (!user) {
-        window.netlifyIdentity.on("login", function () {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
-
  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
 
 <!-- Start of Smooth scroll - https://github.com/alicelieutier/smoothScroll -->
 <script>
