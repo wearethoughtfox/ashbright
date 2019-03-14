@@ -183,17 +183,17 @@
 
 .bg {
   background: none;
-  border: 3px solid #101832;
-  color: #101832;
+  border: 3px solid #fff;
+  color: #fff;
 }
 .bg:before, .bg:after {
-  background: #101832;
-  border: 3px solid #101832;
+  background: #fff;
+  border: 3px solid #fff;
 }
 .bg:hover {
   border-image: none;
 }
 .bg:hover:before, .bg:hover:after {
-  background: #101832;
+  background: #fff;
 }
 
