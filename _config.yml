@@ -1,7 +1,8 @@
 name: Ashbright
 markdown: kramdown
 highlighter: rouge
-exclude: ["node_modules", "gulpfile.js", "package.json", "_redirects"]
+exclude: ["node_modules", "gulpfile.js", "package.json"]
+include: ["_redirects"]
 
 # Setup
 title:               Ashbright
