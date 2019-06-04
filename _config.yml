@@ -35,4 +35,4 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /images/LOGO-RGB.png
+      image: /images/LOGO-RGB.png\
