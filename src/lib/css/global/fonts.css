@@ -1,0 +1,46 @@
+/*
+  Ashbright fonts (self-hosted, latin subsets).
+
+  Oswald: variable font, weights 200–700. Display headings, labels, nav, buttons.
+  PT Serif: body copy. Regular, italic, bold, bold italic.
+*/
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/fonts/oswald-variable.woff2') format('woff2-variations');
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('/fonts/pt-serif-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('/fonts/pt-serif-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('/fonts/pt-serif-bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  src: url('/fonts/pt-serif-bold-italic.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}

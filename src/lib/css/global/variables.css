@@ -1,0 +1,65 @@
+/* Generated tokens — all --color-*, --space-*, --size-step-*, --leading-*, --font-* */
+@import './_tokens.generated.css';
+
+/* Manual variables that live alongside tokens */
+:root {
+  --gutter: var(--space-m-l);
+  --wrapper-max-width: 1280px;
+  --measure: 62ch;
+
+  --transition-base: 250ms ease;
+  --transition-movement: 200ms linear;
+  --transition-fade: 300ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.5, 0.05, 0.2, 1.5);
+
+  /* Hairlines on dark and light surfaces */
+  --stroke: 1px solid color-mix(in srgb, var(--color-ash) 22%, transparent);
+  --stroke-light: 1px solid var(--color-line);
+
+  --radius-s: 0.2rem;
+  --radius-m: 0.75rem;
+  --radius-l: 1.5rem;
+
+  --uppercase-kerning: 0.08em;
+  --display-kerning: 0.02em;
+
+  /* Brand gradient (logo mark): ember → ash → slate */
+  --gradient-brand: linear-gradient(160deg, var(--color-ember) 0%, var(--color-ash) 55%, var(--color-slate) 100%);
+  --gradient-ash: linear-gradient(180deg, var(--color-ash-bright) 0%, var(--color-ash) 100%);
+
+  /* Surface contexts. Components read these, sections set them. */
+  --surface: var(--color-ink);
+  --surface-raised: var(--color-ink-glare);
+  --on-surface: var(--color-mist);
+  --on-surface-muted: color-mix(in srgb, var(--color-mist) 68%, transparent);
+  --on-surface-heading: var(--color-white);
+  --accent: var(--color-ash);
+  --accent-contrast: var(--color-ink);
+}
+
+/* Light surface context: flip the palette for a section */
+[data-surface='light'] {
+  --surface: var(--color-paper);
+  --surface-raised: var(--color-white);
+  --on-surface: var(--color-grey);
+  --on-surface-muted: color-mix(in srgb, var(--color-grey) 72%, transparent);
+  --on-surface-heading: var(--color-graphite);
+  --accent: var(--color-slate);
+  --accent-contrast: var(--color-white);
+  --stroke: 1px solid var(--color-line);
+  background: var(--surface);
+  color: var(--on-surface);
+}
+
+[data-surface='ash'] {
+  --surface: var(--color-ash);
+  --surface-raised: var(--color-ash-bright);
+  --on-surface: var(--color-graphite);
+  --on-surface-muted: color-mix(in srgb, var(--color-graphite) 72%, transparent);
+  --on-surface-heading: var(--color-ink);
+  --accent: var(--color-ink);
+  --accent-contrast: var(--color-ash);
+  --stroke: 1px solid color-mix(in srgb, var(--color-ink) 18%, transparent);
+  background: var(--surface);
+  color: var(--on-surface);
+}

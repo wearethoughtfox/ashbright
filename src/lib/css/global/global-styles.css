@@ -1,0 +1,228 @@
+/*
+  Global styles
+  Low-specificity styles that apply to the whole project: https://cube.fyi/css.html
+*/
+
+html {
+  background: var(--color-ink);
+  color-scheme: dark;
+}
+
+body {
+  background: var(--surface);
+  color: var(--on-surface);
+  font-size: var(--size-step-0);
+  font-family: var(--font-base);
+  font-weight: 400;
+  line-height: var(--leading-standard);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+:is(h1, h2, h3, h4) {
+  font-family: var(--font-display);
+  line-height: var(--leading-fine);
+  text-wrap: balance;
+  color: var(--on-surface-heading);
+}
+
+/* Display headings — Oswald, all caps, light weight for sophistication */
+h1 {
+  font-size: var(--size-step-7);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: var(--display-kerning);
+  line-height: 1.05;
+  max-width: 18ch;
+}
+
+h2 {
+  font-size: var(--size-step-5);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: var(--display-kerning);
+  line-height: 1.1;
+  max-width: 24ch;
+}
+
+h3 {
+  font-size: var(--size-step-2);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  max-width: 30ch;
+}
+
+:is(h4, h5, h6) {
+  font-size: var(--size-step-0);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-kerning);
+}
+
+small {
+  font-size: var(--size-step-00);
+}
+
+/* Constrain body copy line length */
+p,
+li,
+blockquote,
+figcaption,
+dd {
+  max-width: var(--measure, 62ch);
+}
+
+/* Opt out for layout-driven containers */
+.cluster p,
+.grid p,
+[data-no-measure] p {
+  max-width: unset;
+}
+
+p {
+  overflow-wrap: break-word;
+}
+
+/* Lede paragraph: bigger, lighter */
+.lede {
+  font-size: var(--size-step-1);
+  line-height: var(--leading-standard);
+  color: var(--on-surface-muted);
+  max-width: 48ch;
+}
+
+/* Eyebrow label above headings */
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--size-step-00);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  max-width: unset;
+}
+
+ins {
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding-inline: 0.3em;
+}
+
+:is(code, kbd, samp) {
+  font-family: var(--font-mono);
+  padding: 0.2em 0.2em 0.05em 0.2em;
+  hyphens: none;
+  tab-size: 2;
+  text-align: left;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  box-decoration-break: clone;
+}
+
+pre:has(code) {
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+q {
+  font-style: italic;
+}
+
+ul:not([class]) {
+  padding-inline-start: 1.7ch;
+  list-style-type: disc;
+}
+
+ul:not([class]) > li {
+  padding-inline-start: var(--space-xs);
+}
+
+:is(ol, ul):not([class]) li + * {
+  margin-block-start: var(--flow-space, var(--space-xs));
+}
+
+ul ::marker {
+  color: var(--accent);
+}
+
+ol ::marker {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--accent);
+}
+
+[role='list'][class],
+[role='tablist'][class] {
+  margin-block: 0;
+  padding: 0;
+}
+
+dt {
+  font-family: var(--font-display);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--uppercase-kerning);
+  font-size: var(--size-step-00);
+  color: var(--accent);
+}
+
+dt + dd {
+  margin-block-start: var(--space-xs);
+}
+
+dd + dt {
+  margin-block-start: var(--space-s);
+}
+
+dd {
+  margin-inline-start: 0;
+}
+
+a:not([class]) {
+  color: var(--on-surface-heading);
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color var(--transition-base);
+}
+
+a:not([class]):hover {
+  text-decoration-color: currentColor;
+}
+
+hr {
+  border: none;
+  border-block-start: var(--stroke);
+  margin-block: var(--space-l);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--color-ash);
+  color: var(--color-ink);
+}
+
+/* Smooth scrolling — respects reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Anchored headings clear the sticky site header */
+[id] {
+  scroll-margin-block-start: 5.5rem;
+}

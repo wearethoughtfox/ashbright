@@ -1,0 +1,57 @@
+<script>
+  import Button from './Button.svelte';
+  import WaveField from './WaveField.svelte';
+  import { site } from '$lib/content/site.js';
+
+  export let title = 'Intelligence is the advantage. Most leaders don’t have it.';
+  export let text = undefined;
+  export let ctaLabel = site.cta.label;
+  export let ctaHref = site.cta.href;
+</script>
+
+<section class="cta-band" data-surface="ash" aria-labelledby="cta-band-title">
+  <WaveField variant="band" opacity={0.5} dots={false} />
+  <div class="wrapper cta-band__inner">
+    <div class="cta-band__grid">
+      <div class="stack" style:--stack-space="var(--space-s)">
+        <h2 id="cta-band-title">{title}</h2>
+        {#if text}
+          <p class="lede">{text}</p>
+        {/if}
+      </div>
+      <div class="cta-band__action">
+        <Button href={ctaHref}>{ctaLabel}</Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-band {
+    position: relative;
+    isolation: isolate;
+    padding-block: var(--space-2xl);
+    overflow: hidden;
+  }
+
+  .cta-band__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-band__grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: var(--space-l);
+  }
+
+  .cta-band h2 {
+    max-width: 20ch;
+  }
+
+  .cta-band .lede {
+    color: var(--on-surface);
+  }
+</style>

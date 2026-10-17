@@ -1,0 +1,3 @@
+# Legacy redirects carried over from the Jekyll site
+/brightx            https://www.brightx.media/   301
+/index.html         /                            301

@@ -1,0 +1,19 @@
+{
+  "title": "Colors",
+  "description": "Ashbright palette. Ink is the dark base, Mist and White for text on dark, Ash Blue is the signature accent carried over from the 2017 identity. Graphite and Grey for text on light surfaces. Ember is a warm highlight used sparingly (logo gradient, rules).",
+  "items": [
+    { "name": "Ink", "value": "#0E1217" },
+    { "name": "Ink Glare", "value": "#161C24" },
+    { "name": "Ink Soft", "value": "#1F2731" },
+    { "name": "Slate", "value": "#5D6675" },
+    { "name": "Ash", "value": "#B9CCE9" },
+    { "name": "Ash Bright", "value": "#D9E5F7" },
+    { "name": "Mist", "value": "#EEF2F7" },
+    { "name": "Paper", "value": "#F6F8FB" },
+    { "name": "Graphite", "value": "#313131" },
+    { "name": "Grey", "value": "#515151" },
+    { "name": "Line", "value": "#C6C8CA" },
+    { "name": "Ember", "value": "#E0876B" },
+    { "name": "White", "value": "#FFFFFF" }
+  ]
+}

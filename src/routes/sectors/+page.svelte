@@ -1,0 +1,46 @@
+<script>
+  import Seo from '$lib/components/blocks/Seo.svelte';
+  import PageHeader from '$lib/components/blocks/PageHeader.svelte';
+  import LinkCard from '$lib/components/blocks/LinkCard.svelte';
+  import CtaBand from '$lib/components/blocks/CtaBand.svelte';
+  import { sectors } from '$lib/content/sectors.js';
+  import { site } from '$lib/content/site.js';
+
+  const description =
+    'Ashbright works across government, royal courts, sovereign wealth funds, energy, defence, financial services, fintech, investment promotion, citizenship by investment and high net worth individuals.';
+</script>
+
+<Seo
+  title="Sectors"
+  {description}
+  jsonLd={{
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Sectors Ashbright works in',
+    itemListElement: sectors.map((s, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: s.title,
+      url: `${site.url}/sectors/${s.slug}`
+    }))
+  }}
+/>
+
+<PageHeader
+  eyebrow="Sectors"
+  title="A broad variety of sectors. One way of working."
+  lede="Governments, state-owned investors, regulated industries and high-profile individuals share one thing: the cost of being caught off guard is high. That is where intelligence-led communications earns its place."
+  breadcrumb={[{ label: 'Sectors' }]}
+/>
+
+<section class="region">
+  <div class="wrapper">
+    <div class="grid" style:--grid-min-item-size="17rem" style:--gutter="var(--space-m)">
+      {#each sectors as s}
+        <LinkCard href="/sectors/{s.slug}" title={s.title} text={s.short} level="h2" />
+      {/each}
+    </div>
+  </div>
+</section>
+
+<CtaBand />

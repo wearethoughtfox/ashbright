@@ -1,0 +1,18 @@
+{
+  "title": "Fonts",
+  "description": "Ashbright fonts, carried over from the 2017 site. Oswald (variable) for display and labels, PT Serif for body copy.",
+  "items": [
+    {
+      "name": "Base",
+      "value": "'PT Serif', Georgia, 'Times New Roman', serif"
+    },
+    {
+      "name": "Display",
+      "value": "'Oswald', 'Helvetica Neue', Arial, sans-serif"
+    },
+    {
+      "name": "Mono",
+      "value": "'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+    }
+  ]
+}
