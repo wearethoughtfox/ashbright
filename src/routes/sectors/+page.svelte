@@ -28,8 +28,7 @@
 
 <PageHeader
   eyebrow="Sectors"
-  title="A broad variety of sectors. One way of working."
-  lede="Governments, state-owned investors, regulated industries and high-profile individuals share one thing: the cost of being caught off guard is high. That is where intelligence-led communications earns its place."
+  title="Ashbright works across a broad variety of sectors."
   breadcrumb={[{ label: 'Sectors' }]}
 />
 

@@ -13,7 +13,7 @@
         <a href="/" class="site-foot__logo" aria-label="Ashbright, home">
           <Logo size="2.4rem" />
         </a>
-        <p class="site-foot__tagline">Intelligence-led communications counsel for leaders who can’t afford to be caught off guard.</p>
+        <p class="site-foot__tagline">{site.footerLine}</p>
         <p class="site-foot__locations">{site.locations.join(' & ')} · Operating worldwide</p>
       </div>
 

@@ -7,9 +7,11 @@
   import { site, organizationSchema } from '$lib/content/site.js';
   import { people } from '$lib/content/people.js';
   import { services } from '$lib/content/services.js';
+  import { home, positioning } from '$lib/content/home.js';
 
+  // TOM
   const description =
-    'Ashbright is an intelligence-led communications firm founded in 2017 by Tom Ashby and Rupert Wright, based in London and Dubai and operating worldwide.';
+    'Ashbright was founded in 2017 by Tom Ashby and Rupert Wright, based in London and Dubai and operating worldwide.';
 </script>
 
 <Seo
@@ -29,7 +31,7 @@
 
 <PageHeader
   eyebrow="About Ashbright"
-  title="Strategic communications counsel for leaders who can’t afford to be caught off guard."
+  title={positioning.aboutHeading}
   breadcrumb={[{ label: 'About' }]}
 />
 
@@ -38,25 +40,28 @@
     <div class="about-grid">
       <Prose>
         <h2>What it is</h2>
-        <p>Ashbright is an intelligence-led communications firm. We work with CEOs, senior leaders, governments, and high-profile individuals to help them understand their environment, shape perception, and communicate with precision. The work spans research and strategy, content and messaging, reputation management, and crisis response, often all at once.</p>
-        <p>The firm was founded in {site.founded} by <a href="/tom-ashby">Tom Ashby</a> and <a href="/rupert-wright">Rupert Wright</a>, is based in London and Dubai, and operates worldwide.</p>
+        <!-- TOM -->
+        <p>Ashbright is a strategic communications firm that provides counsel to governments, companies and successful individuals. We use data and intelligence to understand and engage people. We design and execute state-of-the-art programmes to enable leaders to mobilise resources, shape perceptions and influence behaviour.</p>
+        <p>Ashbright was founded in {site.founded} by <a href="/tom-ashby">Tom Ashby</a> and <a href="/rupert-wright">Rupert Wright</a>, based in London and Dubai and operating worldwide.</p>
 
-        <h2>Why it exists</h2>
-        <p>Disruption doesn’t warn you. Most leaders are managing reputation problems they never saw coming, because they had no system watching for them. Poor communications is one of the leading causes of failure in change programmes, leadership transitions, and high-stakes decisions, not bad strategy.</p>
+        <!-- Heading NEW, text TOM -->
+        <h2>Why it matters</h2>
+        <p>The forces of disruption and complexity demand high-level communications awareness from leaders. Poor communication is one of the main causes of failure in change programmes. You will not be judged by the crises you face, but how you manage them.</p>
 
-        <h2>How it works</h2>
+        <!-- Service names NEW, items TOM -->
+        <h2 id="how-we-work">How we work</h2>
         <dl class="how-list">
           {#each services as s}
             <div>
               <dt><a href="/services/{s.slug}">{s.title}</a></dt>
-              <dd>{s.short}</dd>
+              <dd>{s.deliverables.join(' · ')}</dd>
             </div>
           {/each}
         </dl>
-        <p>Every engagement starts with intelligence. Strategy and content are built on it, and senior counsel stays with you until the outcome is secure. We use data and intelligence to understand and engage people, and design programmes that enable leaders to mobilise resources, shape perceptions and influence behaviour.</p>
 
+        <!-- TOM, edited -->
         <h2>Who we work with</h2>
-        <p>Governments and royal courts. Sovereign wealth and investment funds. Companies in energy, defence, financial services and fintech. Investment promotion and citizenship-by-investment programmes. High net worth individuals and their families. See the full list of <a href="/sectors">sectors</a>.</p>
+        <p>Governments and royal courts. Sovereign wealth and investment funds. Companies in energy, defence, financial services and fintech. Investment promotion and citizenship-by-investment programmes. High net worth individuals. See the full list of <a href="/sectors">sectors</a>.</p>
       </Prose>
 
       <aside class="about-aside stack" style:--stack-space="var(--space-l)">
@@ -85,7 +90,7 @@
   <div class="wrapper stack" style:--stack-space="var(--space-xl)">
     <div class="stack" style:--stack-space="var(--space-xs)">
       <p class="eyebrow">Founders</p>
-      <h2 id="founders-title">Former journalists and heads of communications.</h2>
+      <h2 id="founders-title">{home.foundersTitle}</h2>
     </div>
     <div class="grid" style:--grid-min-item-size="20rem" style:--gutter="var(--space-l)">
       {#each people as person}

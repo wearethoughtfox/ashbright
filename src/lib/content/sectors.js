@@ -1,6 +1,12 @@
 /**
- * Sectors. Each gets its own page. Copy is deliberately grounded in
- * the firm's stated capabilities rather than invented case studies.
+ * Sectors. The list of ten names is TOM (2017 home page). Each has its own page.
+ *
+ * Copy provenance (Tom must approve):
+ *   short, summary, and the first paragraph of each body: NEW. General framing
+ *   only, with no claims about Ashbright's clients or past work.
+ *   Later paragraphs: TOM, edited. Facts from the two bios or the 2017 site.
+ *   The October 2026 drafts made claims about past engagements that are not on
+ *   the original site; those have been removed.
  */
 export const sectors = [
   {
@@ -8,11 +14,10 @@ export const sectors = [
     title: 'Centre of government',
     short: 'Communications counsel for leaders’ offices, ministries and national programmes.',
     summary:
-      'Strategic communications for heads of government, ministers and national programmes. Audience intelligence, narrative and crisis counsel at the centre of government.',
+      'Strategic communications counsel for governments. Ashbright’s founders have advised the governments of Abu Dhabi and Dubai, St Kitts & Nevis and Dominica.',
     body: [
-      'The centre of government speaks to more audiences than any organisation: citizens, investors, international partners, the media and the machinery of the state itself. Each hears a different version of the same decision. Our work is to make sure the versions add up.',
-      'Ashbright’s founders have advised governments in the Gulf and the Caribbean on national narratives, international positioning and the communication of reform. That experience shapes how we work: intelligence first, a clear strategy second, and senior counsel throughout.',
-      'Typical engagements include building or strengthening a communications function around a leader’s office, preparing for major announcements and international events, and managing the communications of change programmes and crises.'
+      'The centre of government speaks to many audiences at once: citizens, investors, international partners, the media and the machinery of the state itself.',
+      'Rupert Wright has advised the governments of Abu Dhabi and Dubai, St Kitts & Nevis and Dominica in the Caribbean. Tom Ashby has experience in a wide range of government and business sectors, and is an expert in building and leading communications functions, especially at times of crisis and change.'
     ]
   },
   {
@@ -20,47 +25,43 @@ export const sectors = [
     title: 'Citizenship by investment',
     short: 'Positioning and reputation for programmes that depend on international trust.',
     summary:
-      'Communications strategy for citizenship-by-investment programmes and the governments that run them. International positioning, due diligence narratives and reputation management.',
+      'Strategic communications for citizenship-by-investment programmes and the governments that run them.',
     body: [
-      'Citizenship-by-investment programmes live or die on trust. Their audiences are dispersed, sophisticated and sceptical: applicants, agents, correspondent banks, partner governments and an international press that treats the sector with suspicion by default.',
-      'Ashbright has advised Caribbean governments on the communication of their programmes. We understand the questions that get asked about due diligence, governance and economic contribution, and we help programmes answer them before they are asked.',
-      'The work spans international positioning, stakeholder mapping across the agent and intermediary network, media relations and the reputation management that protects a programme when the sector comes under scrutiny.'
+      'Citizenship-by-investment programmes depend on international trust. Their audiences include applicants, agents, banks, partner governments and the international press.',
+      // TOM. The link to Rupert's work for St Kitts & Nevis and Dominica was removed until Tom confirms it was on these programmes.
+      'We use data and intelligence to understand and engage people.'
     ]
   },
   {
     slug: 'defence',
     title: 'Defence',
-    short: 'Disciplined communications for organisations where precision and confidentiality are non-negotiable.',
-    summary:
-      'Strategic communications for defence organisations and suppliers. Precise messaging, stakeholder engagement and crisis readiness in a high-scrutiny sector.',
+    short: 'Communications for organisations where precision and confidentiality matter.',
+    summary: 'Strategic communications counsel for defence organisations and suppliers.',
     body: [
-      'Defence communications operate under constraints most sectors never meet: classification, procurement rules, political sensitivity and an audience that includes governments, parliaments, allies and adversaries.',
-      'Our approach suits that environment. Audience intelligence identifies who influences a decision and what they need to hear. Messaging is built to be precise and defensible. Spokespeople are prepared for scrutiny, not applause.',
-      'Ashbright supports defence organisations and suppliers with positioning, stakeholder engagement, thought leadership and the crisis planning that a sector this exposed requires.'
+      'Defence communications work under constraints most sectors never meet: confidentiality, procurement rules and close political attention.',
+      'Tom Ashby’s experience across government and business sectors includes defence.'
     ]
   },
   {
     slug: 'energy',
     title: 'Energy',
-    short: 'Counsel for energy companies navigating transition, regulation and public scrutiny.',
+    short: 'Counsel for energy companies answering to shareholders, regulators and governments.',
     summary:
-      'Strategic communications for energy companies. Corporate narrative, transition communications, stakeholder engagement and crisis management from advisors with in-house energy experience.',
+      'Strategic communications for energy companies. Tom Ashby led corporate communications at Abu Dhabi National Energy Company (TAQA).',
     body: [
-      'Energy companies are communicating through the most consequential transition in the industry’s history, to shareholders who want returns, regulators who want compliance, communities who want accountability and employees who want a future.',
-      'Ashbright’s founder led corporate communications at a national energy company and has worked with international oil and gas majors. We know the difference between a narrative that survives contact with an analyst call and one that does not.',
-      'Engagements typically cover corporate positioning, transition and sustainability narratives, investor and government communications, incident and crisis response, and the intelligence that keeps a leadership team ahead of the issues.'
+      'Energy companies answer to shareholders, regulators, governments and the communities where they operate.',
+      'From 2012 to 2014, Tom Ashby was Group Vice President, Corporate Communications at Abu Dhabi National Energy Company (TAQA). Rupert Wright has worked with Shell and General Electric, and has run media training courses for Shell.'
     ]
   },
   {
     slug: 'financial-services',
     title: 'Financial services',
-    short: 'Communications for banks, asset managers and capital markets participants.',
+    short: 'Communications for banks, investors and capital markets.',
     summary:
-      'Strategic communications for banks, asset managers and capital markets. Investor narratives, regulatory communications, thought leadership and crisis counsel.',
+      'Strategic communications for financial services, from founders with experience in capital markets, financial services and financial journalism.',
     body: [
-      'Financial institutions are judged on confidence, and confidence is built or lost in communication: with regulators, with markets, with clients and with the media that interprets all three.',
-      'Our team has worked with regional and international banks, and began its career reporting on emerging markets, capital markets and finance for global news organisations. We understand how a story about a financial institution is constructed, and how to shape it.',
-      'Ashbright provides investor and corporate narratives, thought leadership programmes for senior executives, regulatory and litigation communications, and crisis planning for the scenarios a financial institution cannot afford to improvise.'
+      'Financial institutions are judged on confidence, and confidence is built or lost in communication with regulators, markets, clients and the media.',
+      'Tom Ashby’s experience includes private equity, capital markets and financial services, and he spent four years as Business Editor of The National in Abu Dhabi. Rupert Wright has worked with ADCB and Deutsche Bank, and began his career at Euromoney reporting from emerging markets.'
     ]
   },
   {
@@ -68,59 +69,52 @@ export const sectors = [
     title: 'Fintech',
     short: 'Positioning fast-moving companies with the credibility of established institutions.',
     summary:
-      'Communications strategy for fintech companies. Positioning, thought leadership, investor communications and reputation management for growth-stage and scaling businesses.',
+      'Strategic communications for fintech companies. Tom Ashby completed the Oxford Fintech Programme at the Saïd Business School.',
     body: [
-      'Fintech companies need to look like the future to customers and like a safe pair of hands to regulators, partners and investors. Getting both messages right at the same time is a communications problem before it is a marketing one.',
-      'Ashbright has been involved in several successful startups in investor relations, communications and technology, and its founder completed the Oxford Fintech Programme at the Saïd Business School. We bring the discipline of institutional communications to companies that are still building theirs.',
-      'We help fintech leaders with positioning and narrative, founder thought leadership, investor and partner communications, and the reputation groundwork that becomes essential as a company scales into regulated territory.'
+      'Fintech companies need to look like the future to customers and like a safe pair of hands to regulators, partners and investors.',
+      'Tom Ashby has been involved in several successful startups in investor relations, communications and technology. In 2018 he completed a Certificate in Big Data and Social Analytics at MIT and the Oxford Fintech Programme at the Saïd Business School.'
     ]
   },
   {
     slug: 'high-net-worth-individuals',
     title: 'High net worth individuals',
-    short: 'Discreet reputation counsel for successful individuals and their families.',
+    short: 'Reputation counsel for successful individuals.',
     summary:
-      'Reputation management and communications counsel for high net worth individuals, families and family offices. Discreet, disciplined and intelligence-led.',
+      'As a high-profile individual, your reputation is a priceless asset. Ashbright has decades of experience helping successful individuals and business leaders manage their reputation, online and offline.',
     body: [
-      'A successful individual’s reputation is a priceless asset, and it is constantly under threat from business rivals, former associates, inaccurate reporting and the sheer volume of public platforms where a claim can take hold.',
-      'Ashbright has decades of experience helping high-profile individuals manage their public profile in a disciplined way, online and offline. The work is discreet by design. Much of it is intelligence: knowing what is being said, by whom, and what it is likely to become.',
-      'We advise individuals, families and family offices on reputation strategy, media handling, philanthropic and public positioning, and the response to personal or legal crises.'
+      'As a high-profile individual, your reputation is a priceless asset. But with the proliferation of public platforms, your reputation is constantly under threat from disgruntled employees, business rivals and inaccurate reporting.',
+      'Ashbright has decades of experience helping high profile individuals and corporate leaders to manage their reputation in a disciplined way, ensuring that they maintain control over their public profile, online and offline.'
     ]
   },
   {
     slug: 'investment-promotion',
     title: 'Investment promotion',
-    short: 'Telling a country’s or a city’s investment story to the people who allocate capital.',
-    summary:
-      'Communications strategy for investment promotion agencies, economic zones and sovereign investment programmes. International positioning, investor narratives and campaign planning.',
+    short: 'Telling an investment story to the people who allocate capital.',
+    summary: 'Strategic communications for investment promotion.',
     body: [
-      'Attracting investment is a communications discipline. The audience is small, well-advised and comparing you with everywhere else. The story has to be true, specific and repeated consistently by everyone who tells it.',
-      'Ashbright has worked with investment promotion bodies, economic zones and government investment programmes to define their proposition, map the investors and intermediaries who matter, and plan campaigns that reach them where decisions are made.',
-      'Services include proposition and narrative development, audience and channel intelligence, international media relations, event and roadshow support, and reporting that shows what the programme achieved.'
+      'Attracting investment is a communications task. The audience is small, well advised and comparing you with everywhere else.',
+      'We design and execute state-of-the-art programmes to enable leaders to mobilise resources, shape perceptions and influence behaviour.'
     ]
   },
   {
     slug: 'royal-courts',
     title: 'Royal courts',
-    short: 'Counsel for royal courts and the institutions that surround them.',
-    summary:
-      'Strategic communications counsel for royal courts, diwans and the institutions connected to them. Discreet advice on positioning, public engagement and issues management.',
+    short: 'Counsel for royal courts and the institutions around them.',
+    summary: 'Strategic communications counsel for royal courts.',
     body: [
-      'Royal courts and the institutions connected to them communicate under a unique combination of tradition, public interest and international attention. Every appearance, statement and silence is read for meaning.',
-      'Ashbright’s founders have advised royal courts and government offices in the Gulf. That experience informs a way of working that is discreet, senior and grounded in intelligence about how audiences at home and abroad interpret what they see.',
-      'Engagements cover positioning and narrative, preparation for public engagements and international events, issues management, and the structure of the communications function that supports a court or a diwan.'
+      'Royal courts communicate under a particular mix of tradition, public interest and international attention.',
+      'Tom Ashby’s experience across government and business sectors includes royal courts.'
     ]
   },
   {
     slug: 'sovereign-wealth-and-investment-funds',
     title: 'Sovereign wealth and investment funds',
-    short: 'Communications for state-owned investors operating under global scrutiny.',
+    short: 'Communications for state-backed investors under international scrutiny.',
     summary:
-      'Strategic communications for sovereign wealth funds and state-owned investment companies. Corporate narrative, stakeholder engagement, transaction communications and reputation management.',
+      'Strategic communications for sovereign wealth and investment funds. Ashbright’s founders have worked with sovereign wealth funds including Mubadala.',
     body: [
-      'Sovereign investors are watched by governments, regulators, counterparties and the media in every market they enter. Their communications have to reassure without over-explaining, and build a reputation that opens doors rather than raises questions.',
-      'Ashbright’s founders have worked with sovereign wealth funds and state-owned companies in the Gulf, on corporate narrative, transaction communications and the reputational groundwork that precedes a major investment.',
-      'We support sovereign and state-backed investors with positioning, stakeholder intelligence across the markets they operate in, transaction and portfolio communications, and crisis and issues management.'
+      'Sovereign investors are watched by governments, regulators, counterparties and the media in every market they enter.',
+      'Tom Ashby’s experience includes sovereign wealth funds and private equity. Rupert Wright has worked with Mubadala, a sovereign wealth fund.'
     ]
   }
 ];

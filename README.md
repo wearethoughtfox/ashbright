@@ -20,8 +20,8 @@ npm run preview
 | Situations (6, slugs preserved from Jekyll) | `src/lib/content/situations.js` |
 | Sectors (10) | `src/lib/content/sectors.js` |
 | Founders (Tom Ashby, Rupert Wright) | `src/lib/content/people.js` |
-| Insights articles | `src/lib/content/insights.js` |
-| Home page copy | `src/lib/content/home.js` |
+| Insights articles (empty; drafts in `content/drafts/`) | `src/lib/content/insights.js` |
+| Home page copy and the `POSITIONING` switch | `src/lib/content/home.js` |
 | Palette and fonts | `src/lib/design-tokens/*.json` then `npm run tokens` |
 | Logo mark | `src/lib/components/blocks/Logo.svelte`, `static/favicon.svg`, `static/logo-mark.svg` |
 | Wave-line backgrounds | `src/lib/components/blocks/WaveField.svelte` |
@@ -45,3 +45,8 @@ Adding a service, situation, sector or article is a matter of adding an object t
 - Palette: Ink `#0E1217` (base), Ash `#B9CCE9` (accent, carried over from 2017), Slate `#5D6675`, Mist/Paper for light sections, Ember `#E0876B` for the logo gradient only.
 - Type: Oswald (variable, light weight for display) and PT Serif (body), both carried over and self-hosted from `static/fonts/`.
 - Sections switch palette with `data-surface="light"` or `data-surface="ash"`; components read `--surface`, `--on-surface`, `--accent` and so on, so they work on any surface.
+
+## Copy and indexing
+
+- Copy provenance (TOM / TOM, edited / NEW) is marked in the content files and summarised in `COPY-REVIEW.md`.
+- Pages carry `noindex` unless Netlify builds with `CONTEXT=production` (see `vite.config.js`). Set `INDEXABLE=true` to force indexing elsewhere.

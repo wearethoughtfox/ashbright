@@ -1,46 +1,47 @@
+/**
+ * Home and positioning copy.
+ *
+ * POSITIONING is Tom's decision. 'A' uses his 2017 wording throughout;
+ * 'B' uses the positioning package. It sets the About heading and the
+ * closing call to action. HERO sets the home headline on its own.
+ */
+export const POSITIONING = 'A';
+export const HERO = 'B'; // Rob prefers B for the hero (2026-10-19). NEW: needs Tom.
+
+const options = {
+  A: {
+    // TOM
+    headline: 'Strategic communication. Informing intelligent leadership.',
+    aboutHeading: 'Strategic communication. Informing intelligent leadership.',
+    closing: 'Informing intelligent leadership.'
+  },
+  B: {
+    // NEW (positioning package)
+    headline: 'The world got louder. Leaders can’t afford to guess.',
+    aboutHeading: 'Strategic communications counsel for leaders who can’t afford to be caught off guard.',
+    closing: 'Intelligence is the advantage. Most leaders don’t have it.'
+  }
+};
+
+export const positioning = options[POSITIONING];
+
 export const home = {
   hero: {
-    eyebrow: 'Strategic communications counsel · London & Dubai',
-    title: 'The world got louder. Leaders can’t afford to guess.',
-    lede: 'Intelligence-led communications counsel for CEOs and senior leaders navigating complexity, reputation, and change.'
+    eyebrow: 'Strategic communications counsel · London & Dubai', // TOM, edited
+    title: options[HERO].headline,
+    lede: 'Ashbright is a strategic communications firm that provides counsel to governments, companies and successful individuals.', // TOM
+    strip: 'Governments · Companies · Successful individuals' // TOM, edited
   },
-  problem: {
-    title: 'Most leaders are reacting to perception problems they never saw coming.',
-    text: 'Disruption doesn’t warn you. Without an intelligence system watching for it, you’re always a step behind.'
+  whatWeDo: {
+    title: 'What we do', // TOM
+    text: 'We use data and intelligence to understand and engage people. We design and execute state-of-the-art programmes to enable leaders to mobilise resources, shape perceptions and influence behaviour.' // TOM
   },
-  steps: [
-    {
-      title: 'Intelligence first',
-      text: 'We map your audiences, monitor the environment, and surface what matters before it becomes a problem.'
-    },
-    {
-      title: 'Strategy built around you',
-      text: 'We design a communications approach aligned to your objectives, whether that’s mobilising resources, managing change, or protecting reputation.'
-    },
-    {
-      title: 'Execution at the top level',
-      text: 'We work alongside you, in the room, on the platform, through the crisis, until the outcome is secure.'
-    }
-  ],
-  changes: [
-    {
-      title: 'From reactive to ahead',
-      text: 'You stop responding to surprises and start shaping the story before it shapes you.'
-    },
-    {
-      title: 'From noise to signal',
-      text: 'Every meeting, appearance, and message is built on intelligence, not instinct.'
-    },
-    {
-      title: 'From exposed to protected',
-      text: 'Your reputation, built over years, is defended with the same rigour it took to build.'
-    },
-    {
-      title: 'From isolated to advised',
-      text: 'You have a senior team that has seen it before, at the level you operate.'
-    }
-  ],
+  servicesTitle: 'Four areas of service.', // TOM, edited
+  situationsTitle: 'Where are you now?', // NEW
+  sectorsTitle: 'Ashbright works across a broad variety of sectors.', // TOM
+  foundersTitle: 'Former journalists, now senior communications advisers.', // NEW
   closing: {
-    title: 'Intelligence is the advantage. Most leaders don’t have it.'
+    title: positioning.closing,
+    button: 'Get in touch' // TOM
   }
 };

@@ -7,7 +7,8 @@ Project-specific rules:
 - Never rename the situation or founder slugs (they are indexed URLs from the 2017 site).
 - Every page renders `<Seo>` with a title and description, and inner pages use `<PageHeader>` or an equivalent header with `<Breadcrumb>` for BreadcrumbList JSON-LD.
 - Sections opt into a palette with `data-surface="light"` / `data-surface="ash"`. Style components with `--surface`, `--surface-raised`, `--on-surface`, `--on-surface-muted`, `--on-surface-heading`, `--accent`, `--accent-contrast`, never raw colour tokens.
-- Copy style: plain words over adjectives, commas rather than dashes, one primary call to action ("Start a conversation" → /contact).
+- Copy: Tom's 2017 wording first. Tag every line in content files TOM / TOM, edited / NEW and keep COPY-REVIEW.md current. Never add claims about clients or past work that are not in the original site or bios.
+- Positioning is Tom's call: one switch, `POSITIONING` in `src/lib/content/home.js`.
 
 # CSS Methodology (inherited from the starter)
 

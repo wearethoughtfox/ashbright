@@ -1,28 +1,33 @@
 /**
- * Services. Four practice areas, each with its own page for search visibility.
- * The old site listed capabilities under three headings (research and strategy,
- * content development, engagement). Those capabilities are redistributed here.
+ * Services. Four practice areas, each with its own page.
+ *
+ * Copy provenance:
+ *   The four-service grouping and the titles: NEW (the 2017 site had three
+ *   categories: research and strategy, content development, engagement).
+ *   deliverables: TOM. Every item from the 2017 lists, each used once, as set in
+ *   the copy review doc.
+ *   short: the item list joined with " · " (set below). Used as the intro line
+ *   and card text everywhere, so it never repeats a Situation sentence.
+ *   intro: TOM, edited. Sentences lifted from the 2017 home page and
+ *   situation pages, regrouped under each service. No new facts.
+ *   summary: TOM, edited. Meta description.
  */
-export const services = [
+const serviceData = [
   {
     slug: 'audience-intelligence',
     title: 'Audience intelligence',
-    short: 'Know who matters, what they believe and where they listen, before a word is written.',
     summary:
-      'Audience profiling, stakeholder mapping, media monitoring and trends analysis. Ashbright builds the intelligence layer that every message should stand on.',
+      'Ashbright uses data and intelligence to understand and engage people: peer group analysis, audience profiling and targeting, trends and channels analysis, and data analytics.',
     intro: [
-      'Most communications programmes start with the message. Ours start with the people who will hear it. Before anything is written, we profile and map the audiences that matter to you: what they believe, which channels they trust, who influences them and where the pressure points are.',
-      'That intelligence layer is what turns communications from instinct into a discipline. It tells you which battles are worth fighting, which stakeholders need attention now, and what is already being said about you in rooms you are not in.',
-      'The work draws on data and analytics, structured monitoring and decades of experience reading how news, markets and governments respond to leaders. It is delivered as briefings you can act on, not dashboards you have to interpret.'
+      'We use data and intelligence to understand and engage people.',
+      'Ashbright has extensive experience supporting leaders as their in-house advisors, providing intelligence on prospective partners, preparing detailed briefings on industry trends and monitoring media coverage.'
     ],
     deliverables: [
+      'Peer group analysis',
       'Audience profiling and targeting',
-      'Stakeholder and influencer mapping',
-      'Peer group and competitor analysis',
       'Trends analysis',
       'Channels analysis',
-      'Media monitoring and data analytics',
-      'Management reporting'
+      'Data analytics'
     ],
     relatedSituations: ['start', 'smarter'],
     relatedServices: ['strategy-and-planning', 'crisis-and-reputation']
@@ -30,22 +35,17 @@ export const services = [
   {
     slug: 'strategy-and-planning',
     title: 'Strategy and planning',
-    short: 'Communications programmes built around specific objectives, not activity for its own sake.',
     summary:
-      'Communications strategy, campaign planning and issues management for leaders who need to mobilise resources, manage change or influence behaviour.',
+      'Ashbright designs and executes state-of-the-art programmes to enable leaders to mobilise resources, shape perceptions and influence behaviour: communications strategy, campaign planning and management reporting.',
     intro: [
-      'A communications strategy should answer one question: what do you need people to think, feel or do, and by when? We build programmes around that answer. Mobilising investors. Winning support for a restructuring. Shifting how a market or a ministry sees you.',
-      'Every plan is grounded in the intelligence work that precedes it, so choices about message, messenger, channel and timing are made on evidence. We also design the communications function itself when a leader needs one built or rebuilt: structure, people, processes and reporting.',
-      'We work alongside chief executives, boards, government offices and the management consultants already in the room. The plan is a shared instrument, and we stay involved until it is delivered.'
+      'We design and execute state-of-the-art programmes to enable leaders to mobilise resources, shape perceptions and influence behaviour.',
+      'Ashbright has decades of experience working alongside senior leaders and management consultants on restructuring programmes to define strategy, engage stakeholders, overcome resistance and meet project deadlines.'
     ],
     deliverables: [
       'Communications strategy',
       'Campaign planning',
-      'Issues management',
-      'Communications function design and build',
-      'Stakeholder engagement planning',
-      'Investor and partner mobilisation',
-      'Measurement frameworks'
+      'Management reporting',
+      'Feedback development'
     ],
     relatedSituations: ['start', 'transform', 'marketing'],
     relatedServices: ['audience-intelligence', 'content-and-counsel']
@@ -53,21 +53,18 @@ export const services = [
   {
     slug: 'content-and-counsel',
     title: 'Content and counsel',
-    short: 'Speeches, messaging and thought leadership, with a senior advisor beside you when it counts.',
     summary:
-      'Speechwriting, messaging, thought leadership, media training and leadership support from former journalists and senior communications advisors.',
+      'Messaging, thought leadership, speechwriting, media training and relations, leadership support and relationship building from Ashbright.',
     intro: [
-      'The people who write and advise at Ashbright spent their earlier careers as editors, correspondents and heads of communications. They know what a good story sounds like, what a weak argument looks like from the other side of the table, and how a single phrase can travel.',
-      'We write speeches, opinion pieces, messaging frameworks, corporate content, film scripts and social content. We prepare leaders for interviews, panels and difficult conversations. And we stay close, in the room before a critical meeting and on the platform at a public appearance.',
-      'Content is only ever the last step. Everything we produce is built on the audience intelligence and strategy work that came before it, so it lands with the people it was written for.'
+      'Our work encompasses stakeholder mapping, peer benchmarking, media outreach, corporate content drafting, film scripts, social media content, speech writing and thought leadership positioning.',
+      'We help to target influential partners and speaking opportunities, provide media training and support leaders throughout their public engagements, including detailed post-event reports including data illustrating impact and reach.'
     ],
     deliverables: [
-      'Messaging and narrative development',
+      'Messaging',
+      'Thought leadership',
       'Speechwriting',
-      'Thought leadership and opinion',
-      'Media training and media relations',
-      'Leadership support and event preparation',
-      'Corporate content, film scripts and social content',
+      'Media training and relations',
+      'Leadership support',
       'Relationship building'
     ],
     relatedSituations: ['smarter', 'marketing'],
@@ -76,27 +73,19 @@ export const services = [
   {
     slug: 'crisis-and-reputation',
     title: 'Crisis and reputation',
-    short: 'Leadership-level experience of restructuring, succession, litigation and fatalities.',
     summary:
-      'Crisis management and reputation counsel for leaders, companies and governments. Fast, disciplined and experienced at the top level.',
+      'You will not be judged by the crises you face, but how you manage them. Ashbright has leadership experience in managing crises including restructuring, succession and fatalities.',
     intro: [
-      'You will not be judged by the crises you face, but by how you manage them. In the social media age there is no time to waste when a crisis hits, and no room for a first-time response. Ashbright has led communications through restructurings, leadership successions, litigation, accidents and fatalities.',
-      'Reputation work is the slower discipline that stops many crises from starting. For high-profile individuals and corporate leaders, a reputation is a priceless asset under constant pressure from rivals, former employees and inaccurate reporting. We help you manage it in a disciplined way, online and offline.',
-      'Both are intelligence-led. Monitoring tells you what is building before it breaks. Audience mapping tells you who needs to hear from you first. When it counts, we are in the room.'
+      'You will not be judged by the crises you face, but how you manage them. In the social media age, there is no time to waste when crisis hits. Whether a leadership succession, accident or personal crisis, you need to act fast and smart to manage expectations and turn a crisis into an opportunity.',
+      'As a high-profile individual, your reputation is a priceless asset. But with the proliferation of public platforms, your reputation is constantly under threat from disgruntled employees, business rivals and inaccurate reporting. Ashbright has decades of experience helping high profile individuals and corporate leaders to manage their reputation in a disciplined way, ensuring that they maintain control over their public profile, online and offline.'
     ],
-    deliverables: [
-      'Crisis planning and response',
-      'Reputation strategy for leaders and organisations',
-      'Litigation and regulatory communications',
-      'Succession and restructuring communications',
-      'Issues monitoring and early warning',
-      'Spokesperson preparation',
-      'Post-crisis review and rebuilding'
-    ],
+    deliverables: ['Issues management', 'Crisis management'],
     relatedSituations: ['crisis', 'reputation'],
     relatedServices: ['audience-intelligence', 'content-and-counsel']
   }
 ];
+
+export const services = serviceData.map((s) => ({ ...s, short: s.deliverables.join(' · ') }));
 
 export function getService(slug) {
   return services.find((s) => s.slug === slug);

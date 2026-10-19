@@ -25,8 +25,7 @@
 
 <PageHeader
   eyebrow="Contact"
-  title="Start a conversation."
-  lede="Most engagements begin with a short, confidential conversation about where you are and what is coming. Email or call, and Tom or Rupert will reply personally."
+  title="Get in touch."
   breadcrumb={[{ label: 'Contact' }]}
 />
 
@@ -41,7 +40,6 @@
       <div class="contact-card stack" style:--stack-space="var(--space-m)">
         <p class="eyebrow">Telephone</p>
         <p class="contact-card__value"><a href="tel:{site.tel}">{site.telDisplay}</a></p>
-        <p class="muted">Dubai office. We operate across London and Gulf hours.</p>
       </div>
       <div class="contact-card stack" style:--stack-space="var(--space-m)">
         <p class="eyebrow">Offices</p>
@@ -52,16 +50,6 @@
           {site.address.region}, {site.address.country}
         </address>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="region" data-surface="light">
-  <div class="wrapper">
-    <div class="stack" style:--stack-space="var(--space-m)">
-      <p class="eyebrow">What to expect</p>
-      <h2>Confidential by default.</h2>
-      <p class="lede">Tell us the situation in as much or as little detail as you like. We will come back within one working day with a view on whether and how we can help. Nothing you share is passed on, and nothing is quoted without permission.</p>
     </div>
   </div>
 </section>

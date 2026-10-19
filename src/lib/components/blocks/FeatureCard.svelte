@@ -193,7 +193,8 @@
     font-size: var(--size-step-00);
     line-height: 1.45;
     color: var(--card-muted);
-    max-width: 30ch;
+    flex: 1;
+    max-width: none;
   }
 
   .feature-card__ticks {

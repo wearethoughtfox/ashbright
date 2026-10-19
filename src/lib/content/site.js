@@ -5,12 +5,12 @@ export const site = {
   name: 'Ashbright',
   legalName: 'Ashbright DWC-LLC',
   url: 'https://www.ashbright.com',
-  tagline: 'Strategic communications counsel',
-  oneLiner: 'The world got louder. Leaders can’t afford to guess.',
+  tagline: 'Strategic communication', // TOM (2017 _config.yml)
+  // TOM: meta description from the 2017 site
   description:
-    'Intelligence-led communications counsel for CEOs and senior leaders. Strategy, reputation, crisis, and change, built on data, not guesswork.',
-  ogDescription:
-    'Intelligence-led communications counsel for CEOs and senior leaders navigating complexity, reputation, and change.',
+    'Ashbright is a strategic communications firm that provides counsel to governments, companies and successful individuals.',
+  // TOM, edited: footer line
+  footerLine: 'Strategic communications counsel to governments, companies and successful individuals.',
   email: 'ta@ashbright.com',
   tel: '+971502206916',
   telDisplay: '+971 50 220 6916',
@@ -33,7 +33,6 @@ export const site = {
     { href: '/services', label: 'Services' },
     { href: '/situations', label: 'Situations' },
     { href: '/sectors', label: 'Sectors' },
-    { href: '/insights', label: 'Insights' },
     { href: '/contact', label: 'Contact' }
   ]
 };

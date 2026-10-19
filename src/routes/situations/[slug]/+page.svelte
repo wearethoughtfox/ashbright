@@ -33,7 +33,6 @@
 <PageHeader
   eyebrow="Situation"
   title={situation.title}
-  lede={situation.short}
   image={situation.image}
   imageAlt={situation.imageAlt}
   breadcrumb={[{ label: 'Situations', href: '/situations' }, { label: situation.title }]}
@@ -53,8 +52,8 @@
   <section class="region" data-surface="light" aria-labelledby="svc-title">
     <div class="wrapper stack" style:--stack-space="var(--space-l)">
       <div class="stack" style:--stack-space="var(--space-xs)">
-        <p class="eyebrow">How we help</p>
-        <h2 id="svc-title">The services that apply</h2>
+        <p class="eyebrow">Services</p>
+        <h2 id="svc-title">Related services</h2>
       </div>
       <div class="grid" style:--grid-min-item-size="18rem" style:--gutter="var(--space-m)">
         {#each services as s}
@@ -68,8 +67,8 @@
 <section class="region" aria-labelledby="other-title">
   <div class="wrapper stack" style:--stack-space="var(--space-l)">
     <div class="stack" style:--stack-space="var(--space-xs)">
-      <p class="eyebrow">Other situations</p>
-      <h2 id="other-title">Or somewhere else?</h2>
+      <p class="eyebrow">Situations</p>
+      <h2 id="other-title">Other situations</h2>
     </div>
     <div class="grid" style:--grid-min-item-size="14rem" style:--gutter="var(--space-s)">
       {#each others as s}

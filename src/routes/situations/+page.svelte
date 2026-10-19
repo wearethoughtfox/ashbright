@@ -29,7 +29,6 @@
 <PageHeader
   eyebrow="Situations"
   title="Where are you now?"
-  lede="Leaders rarely call because they want communications. They call because something is happening. These are the situations we are most often brought into."
   breadcrumb={[{ label: 'Situations' }]}
 />
 

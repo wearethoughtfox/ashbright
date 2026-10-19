@@ -19,7 +19,7 @@ export function GET() {
     { loc: '/sectors', priority: '0.8', changefreq: 'monthly' },
     ...sectors.map((s) => ({ loc: `/sectors/${s.slug}`, priority: '0.7', changefreq: 'monthly' })),
     ...people.map((p) => ({ loc: `/${p.slug}`, priority: '0.7', changefreq: 'yearly' })),
-    { loc: '/insights', priority: '0.7', changefreq: 'weekly' },
+    ...(insights.length ? [{ loc: '/insights', priority: '0.7', changefreq: 'weekly' }] : []),
     ...insights.map((i) => ({ loc: `/insights/${i.slug}`, priority: '0.6', changefreq: 'yearly', lastmod: i.date })),
     { loc: '/contact', priority: '0.8', changefreq: 'yearly' }
   ];

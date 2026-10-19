@@ -2,10 +2,11 @@
   import Button from './Button.svelte';
   import WaveField from './WaveField.svelte';
   import { site } from '$lib/content/site.js';
+  import { home } from '$lib/content/home.js';
 
-  export let title = 'Intelligence is the advantage. Most leaders don’t have it.';
+  export let title = home.closing.title;
   export let text = undefined;
-  export let ctaLabel = site.cta.label;
+  export let ctaLabel = home.closing.button;
   export let ctaHref = site.cta.href;
 </script>
 

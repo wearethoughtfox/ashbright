@@ -15,6 +15,13 @@
   /** @type {boolean} */
   export let noindex = false;
 
+  /**
+   * Search engines may only index Netlify production builds. Branch deploys,
+   * deploy previews and local builds get noindex. INDEXABLE=true forces it on.
+   */
+  // eslint-disable-next-line no-undef
+  const indexable = __INDEXABLE__;
+
   $: fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.tagline}`;
   $: path = $page.url.pathname.replace(/\/$/, '') || '';
   $: canonical = `${site.url}${path === '' ? '/' : path}`;
@@ -31,12 +38,12 @@
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
-  {#if noindex}
+  {#if noindex || !indexable}
     <meta name="robots" content="noindex, nofollow" />
   {/if}
   <meta property="og:site_name" content={site.name} />
   <meta property="og:type" content={type} />
-  <meta property="og:title" content={title ? `${title}, ${site.name}` : `${site.name}, Strategic Communications for Leaders`} />
+  <meta property="og:title" content={title ? `${title}, ${site.name}` : `${site.name}, ${site.tagline}`} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
   <meta property="og:image" content={ogImage} />

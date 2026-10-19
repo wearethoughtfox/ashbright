@@ -46,20 +46,12 @@
 
 <section class="region">
   <div class="wrapper">
-    <div class="service-grid">
+    <div>
       <Prose>
         {#each service.intro as p}
           <p>{p}</p>
         {/each}
       </Prose>
-      <aside class="service-aside">
-        <h2 class="service-aside__title">What it includes</h2>
-        <ul role="list" class="service-aside__list">
-          {#each service.deliverables as d}
-            <li>{d}</li>
-          {/each}
-        </ul>
-      </aside>
     </div>
   </div>
 </section>
@@ -69,11 +61,11 @@
     <div class="wrapper stack" style:--stack-space="var(--space-l)">
       <div class="stack" style:--stack-space="var(--space-xs)">
         <p class="eyebrow">Situations</p>
-        <h2 id="sit-title">When leaders call on this.</h2>
+        <h2 id="sit-title">Related situations</h2>
       </div>
       <div class="grid" style:--grid-min-item-size="18rem" style:--gutter="var(--space-m)">
         {#each situations as s}
-          <LinkCard href="/situations/{s.slug}" title={s.title} text={s.short} />
+          <LinkCard href="/situations/{s.slug}" title={s.title} />
         {/each}
       </div>
     </div>
@@ -84,8 +76,8 @@
   <section class="region" aria-labelledby="rel-title">
     <div class="wrapper stack" style:--stack-space="var(--space-l)">
       <div class="stack" style:--stack-space="var(--space-xs)">
-        <p class="eyebrow">Related services</p>
-        <h2 id="rel-title">Works alongside</h2>
+        <p class="eyebrow">Services</p>
+        <h2 id="rel-title">Related services</h2>
       </div>
       <div class="grid" style:--grid-min-item-size="18rem" style:--gutter="var(--space-m)">
         {#each related as s}
@@ -99,42 +91,4 @@
 <CtaBand />
 
 <style>
-  .service-grid {
-    display: grid;
-    gap: var(--space-xl);
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  @media (min-width: 60rem) {
-    .service-grid {
-      grid-template-columns: minmax(0, 1fr) 20rem;
-      gap: var(--space-3xl);
-    }
-  }
-
-  .service-aside {
-    align-self: start;
-    position: sticky;
-    top: 6rem;
-    background: var(--surface-raised);
-    border: var(--stroke);
-    border-radius: var(--radius-m);
-    padding: var(--space-m);
-  }
-
-  .service-aside__title {
-    font-size: var(--size-step-00);
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--accent);
-    margin-block-end: var(--space-s);
-  }
-
-  .service-aside__list li {
-    padding-block: var(--space-xs);
-    border-block-start: var(--stroke);
-    font-size: var(--size-step-0);
-    max-width: unset;
-  }
 </style>

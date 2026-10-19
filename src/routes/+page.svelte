@@ -2,8 +2,6 @@
   import Seo from '$lib/components/blocks/Seo.svelte';
   import Button from '$lib/components/blocks/Button.svelte';
   import WaveField from '$lib/components/blocks/WaveField.svelte';
-  import Steps from '$lib/components/blocks/Steps.svelte';
-  import LinkCard from '$lib/components/blocks/LinkCard.svelte';
   import FeatureCard from '$lib/components/blocks/FeatureCard.svelte';
   import CardArt from '$lib/components/blocks/CardArt.svelte';
   import SectionLabel from '$lib/components/blocks/SectionLabel.svelte';
@@ -49,34 +47,23 @@
       <p class="lede hero__lede">{home.hero.lede}</p>
       <div class="cluster" style:--gutter="var(--space-s)">
         <Button href={site.cta.href}>{site.cta.label}</Button>
-        <Button href="/about" variant="ghost">How we work</Button>
+        <Button href="/about#how-we-work" variant="ghost">How we work</Button>
       </div>
     </div>
   </div>
   <div class="hero__foot wrapper">
-    <p class="hero__meta">Governments · Companies · High-profile individuals</p>
+    <p class="hero__meta">{home.hero.strip}</p>
     <p class="hero__meta">Est. {site.founded}</p>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="region" data-surface="light" aria-labelledby="problem-title">
+<!-- WHAT WE DO -->
+<section class="region" data-surface="light" aria-labelledby="what-title">
   <div class="wrapper">
-    <div class="problem">
-      <h2 id="problem-title">{home.problem.title}</h2>
-      <p class="lede">{home.problem.text}</p>
+    <div class="what-we-do">
+      <h2 id="what-title">{home.whatWeDo.title}</h2>
+      <p class="lede">{home.whatWeDo.text}</p>
     </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="region" aria-labelledby="how-title">
-  <div class="wrapper stack" style:--stack-space="var(--space-xl)">
-    <div class="section-head">
-      <SectionLabel label="How it works" note="003" />
-      <h2 id="how-title">Intelligence first. Then strategy. Then the room.</h2>
-    </div>
-    <Steps steps={home.steps} />
   </div>
 </section>
 
@@ -85,7 +72,7 @@
   <div class="wrapper stack" style:--stack-space="var(--space-l)">
     <SectionLabel label="Services" note="004" />
     <div class="section-head section-head--split">
-      <h2 id="services-title">Four disciplines, one intelligence layer.</h2>
+      <h2 id="services-title">{home.servicesTitle}</h2>
       <Button href="/services" variant="ghost">All services</Button>
     </div>
     <div class="grid" style:--grid-min-item-size="15rem" style:--gutter="10px">
@@ -104,30 +91,12 @@
   </div>
 </section>
 
-<!-- WHAT CHANGES -->
-<section class="region" data-surface="light" aria-labelledby="changes-title">
-  <div class="wrapper stack" style:--stack-space="var(--space-xl)">
-    <div class="section-head">
-      <SectionLabel label="What changes" />
-      <h2 id="changes-title">The difference isn’t budget. It’s whether you have a system.</h2>
-    </div>
-    <dl class="changes">
-      {#each home.changes as c}
-        <div class="changes__item">
-          <dt>{c.title}</dt>
-          <dd>{c.text}</dd>
-        </div>
-      {/each}
-    </dl>
-  </div>
-</section>
-
 <!-- SITUATIONS -->
-<section class="region blueprint" aria-labelledby="situations-title">
+<section class="region" data-surface="light" aria-labelledby="situations-title">
   <div class="wrapper stack" style:--stack-space="var(--space-l)">
     <SectionLabel label="Situations" note="006" />
     <div class="section-head section-head--split">
-      <h2 id="situations-title">Where are you now?</h2>
+      <h2 id="situations-title">{home.situationsTitle}</h2>
       <Button href="/situations" variant="ghost">All situations</Button>
     </div>
     <div class="grid" data-layout="thirds" style:--gutter="10px">
@@ -147,11 +116,11 @@
 </section>
 
 <!-- SECTORS -->
-<section class="region" data-surface="light" aria-labelledby="sectors-title">
+<section class="region" aria-labelledby="sectors-title">
   <div class="wrapper stack" style:--stack-space="var(--space-l)">
     <div class="section-head">
       <SectionLabel label="Sectors" note="010" />
-      <h2 id="sectors-title">Ashbright works across a broad variety of sectors.</h2>
+      <h2 id="sectors-title">{home.sectorsTitle}</h2>
     </div>
     <ul role="list" class="cluster pills" style:--gutter="var(--space-xs)">
       {#each sectors as sector}
@@ -162,12 +131,12 @@
 </section>
 
 <!-- FOUNDERS -->
-<section class="region" aria-labelledby="people-title">
+<section class="region" data-surface="light" aria-labelledby="people-title">
   <div class="wrapper stack" style:--stack-space="var(--space-xl)">
     <div class="section-head section-head--split">
       <div class="stack" style:--stack-space="var(--space-xs)">
         <SectionLabel label="Founders" />
-        <h2 id="people-title">Senior counsel that has seen it before.</h2>
+        <h2 id="people-title">{home.foundersTitle}</h2>
       </div>
       <Button href="/about" variant="ghost">About Ashbright</Button>
     </div>
@@ -179,7 +148,7 @@
   </div>
 </section>
 
-<CtaBand title={home.closing.title} />
+<CtaBand title={home.closing.title} ctaLabel={home.closing.button} />
 
 <style>
   .hero {
@@ -230,13 +199,13 @@
     max-width: unset;
   }
 
-  .problem {
+  .what-we-do {
     display: grid;
     gap: var(--space-m);
     max-width: 60rem;
   }
 
-  .problem h2 {
+  .what-we-do h2 {
     font-size: var(--size-step-6);
     max-width: 18ch;
   }
@@ -252,32 +221,6 @@
     justify-content: space-between;
     align-items: end;
     gap: var(--space-m);
-  }
-
-  .changes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-    gap: var(--space-s);
-  }
-
-  .changes__item {
-    background: var(--surface-raised);
-    border: var(--stroke);
-    border-radius: var(--radius-m);
-    padding: var(--space-l);
-  }
-
-  .changes dt {
-    font-size: var(--size-step-2);
-    font-weight: 300;
-    letter-spacing: 0.04em;
-    color: var(--on-surface-heading);
-  }
-
-  .changes dd {
-    margin-block-start: var(--space-xs);
-    color: var(--on-surface-muted);
-    max-width: 36ch;
   }
 
   .pill {

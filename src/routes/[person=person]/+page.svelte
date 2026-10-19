@@ -42,7 +42,6 @@
         <div class="stack" style:--stack-space="var(--space-s)">
           <p class="eyebrow">{person.role}</p>
           <h1>{person.name}</h1>
-          <p class="lede">{person.short}</p>
         </div>
       </div>
     </div>

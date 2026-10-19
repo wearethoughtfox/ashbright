@@ -6,6 +6,7 @@
   import CtaBand from '$lib/components/blocks/CtaBand.svelte';
   import { services } from '$lib/content/services.js';
   import { site } from '$lib/content/site.js';
+  import { home } from '$lib/content/home.js';
 
   const serviceArt = {
     'audience-intelligence': 'rings',
@@ -15,7 +16,7 @@
   };
 
   const description =
-    'Ashbright services: audience intelligence, strategy and planning, content and counsel, crisis and reputation. Strategic communications for CEOs, governments and high-profile individuals.';
+    'Ashbright’s four areas of service: audience intelligence, strategy and planning, content and counsel, crisis and reputation. Strategic communications counsel to governments, companies and successful individuals.';
 </script>
 
 <Seo
@@ -36,8 +37,8 @@
 
 <PageHeader
   eyebrow="Services"
-  title="Four disciplines. One intelligence layer."
-  lede="Research and strategy, content and messaging, reputation management and crisis response, often all at once. Every one of them starts with knowing who matters and what they believe."
+  title={home.servicesTitle}
+  lede={home.whatWeDo.text}
   breadcrumb={[{ label: 'Services' }]}
 />
 
@@ -60,4 +61,4 @@
   </div>
 </section>
 
-<CtaBand title="Not sure which you need? Start with a conversation." />
+<CtaBand />

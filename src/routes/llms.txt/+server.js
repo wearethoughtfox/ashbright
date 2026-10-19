@@ -12,7 +12,7 @@ export function GET() {
 
 > ${site.description}
 
-${site.name} is an intelligence-led strategic communications firm founded in ${site.founded} by Tom Ashby and Rupert Wright, based in London and Dubai and operating worldwide. Clients include governments, royal courts, sovereign wealth funds, companies and high-profile individuals.
+${site.name} was founded in ${site.founded} by Tom Ashby and Rupert Wright, based in London and Dubai and operating worldwide. We use data and intelligence to understand and engage people.
 
 ## Services
 ${services.map((s) => `- [${s.title}](${site.url}/services/${s.slug}): ${s.short}`).join('\n')}
@@ -26,10 +26,7 @@ ${sectors.map((s) => `- [${s.title}](${site.url}/sectors/${s.slug}): ${s.short}`
 ## People
 ${people.map((p) => `- [${p.name}, ${p.role}](${site.url}/${p.slug}): ${p.short}`).join('\n')}
 
-## Insights
-${insights.map((i) => `- [${i.title}](${site.url}/insights/${i.slug}): ${i.summary}`).join('\n')}
-
-## Contact
+${insights.length ? `## Insights\n${insights.map((i) => `- [${i.title}](${site.url}/insights/${i.slug}): ${i.summary}`).join('\n')}\n\n` : ''}## Contact
 - Email: ${site.email}
 - Telephone: ${site.telDisplay}
 - [Contact page](${site.url}/contact)
