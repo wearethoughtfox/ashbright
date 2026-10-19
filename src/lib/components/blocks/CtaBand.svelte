@@ -40,11 +40,10 @@
     z-index: 1;
   }
 
+  /* Headline, then the button underneath: the same pattern as the hero */
   .cta-band__grid {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: end;
-    justify-content: space-between;
+    display: grid;
+    justify-items: start;
     gap: var(--space-l);
   }
 

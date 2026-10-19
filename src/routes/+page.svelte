@@ -214,24 +214,17 @@
     max-width: unset;
   }
 
-  /* Text left, call to action right; the button drops below on narrow screens */
+  /* Text, then the button underneath: the same pattern as the hero */
   .what-we-do {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
+    display: grid;
+    justify-items: start;
     gap: var(--space-l);
+    max-width: 60rem;
   }
 
   .what-we-do__text {
     display: grid;
     gap: var(--space-m);
-    flex: 1 1 32rem;
-    max-width: 60rem;
-  }
-
-  .what-we-do__action {
-    flex: 0 0 auto;
   }
 
   .what-we-do h2 {
