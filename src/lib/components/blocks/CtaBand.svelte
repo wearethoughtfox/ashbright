@@ -8,12 +8,14 @@
   export let text = undefined;
   export let ctaLabel = home.closing.button;
   export let ctaHref = site.cta.href;
+  /** Centre the content in the home page's hero column on wide screens */
+  export let heroColumn = false;
 </script>
 
 <section class="cta-band" data-surface="ash" aria-labelledby="cta-band-title">
   <WaveField variant="band" opacity={0.5} dots={false} />
   <div class="wrapper cta-band__inner">
-    <div class="cta-band__grid">
+    <div class="cta-band__grid" class:cta-band__grid--hero={heroColumn}>
       <div class="stack" style:--stack-space="var(--space-s)">
         <h2 id="cta-band-title">{title}</h2>
         {#if text}
@@ -45,6 +47,13 @@
     display: grid;
     justify-items: start;
     gap: var(--space-l);
+  }
+
+  @media (min-width: 56rem) {
+    .cta-band__grid--hero {
+      width: min(100%, var(--hero-column));
+      margin-inline: auto;
+    }
   }
 
   .cta-band h2 {

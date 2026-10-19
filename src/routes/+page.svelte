@@ -155,7 +155,7 @@
   </div>
 </section>
 
-<CtaBand title={home.closing.title} ctaLabel={home.closing.button} />
+<CtaBand title={home.closing.title} ctaLabel={home.closing.button} heroColumn />
 
 <style>
   .hero {
@@ -184,11 +184,18 @@
     align-items: center;
   }
 
-  /* Below the nav breakpoint, line the hero up with the sections below.
-     Wider screens keep the centred hero column. */
-  @media (max-width: 55.99rem) {
-    .hero__inner {
-      width: 100%;
+  /* Small screens: everything lines up with the page edge.
+     Wide screens: hero, What we do and the closing band share one centred column. */
+  .hero__inner {
+    width: 100%;
+  }
+
+  @media (min-width: 56rem) {
+    .hero__body,
+    .hero__foot,
+    .what-we-do {
+      width: min(100%, var(--hero-column));
+      margin-inline: auto;
     }
   }
 

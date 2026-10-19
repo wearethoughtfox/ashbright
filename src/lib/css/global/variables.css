@@ -6,6 +6,8 @@
   --gutter: var(--space-m-l);
   --wrapper-max-width: 1280px;
   --measure: 62ch;
+  /* Centred column shared by the home hero, What we do and the closing band on wide screens */
+  --hero-column: 35rem;
 
   --transition-base: 250ms ease;
   --transition-movement: 200ms linear;
