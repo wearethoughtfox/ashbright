@@ -38,7 +38,6 @@
 />
 
 <PageHeader
-  eyebrow="Service"
   title={service.title}
   lede={service.short}
   breadcrumb={[{ label: 'Services', href: '/services' }, { label: service.title }]}

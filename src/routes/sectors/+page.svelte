@@ -27,7 +27,6 @@
 />
 
 <PageHeader
-  eyebrow="Sectors"
   title="Ashbright works across a broad variety of sectors."
   breadcrumb={[{ label: 'Sectors' }]}
 />

@@ -29,8 +29,7 @@ export const home = {
   hero: {
     eyebrow: 'Strategic communications counsel · London & Dubai', // TOM, edited
     title: options[HERO].headline,
-    lede: 'Ashbright is a strategic communications firm that provides counsel to governments, companies and successful individuals.', // TOM
-    strip: 'Governments · Companies · Successful individuals' // TOM, edited
+    lede: 'Ashbright is a strategic communications firm that provides counsel to governments, companies and successful individuals.' // TOM
   },
   whatWeDo: {
     title: 'What we do', // TOM

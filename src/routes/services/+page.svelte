@@ -36,7 +36,6 @@
 />
 
 <PageHeader
-  eyebrow="Services"
   title={home.servicesTitle}
   lede={home.whatWeDo.text}
   breadcrumb={[{ label: 'Services' }]}

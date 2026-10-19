@@ -30,7 +30,6 @@
 />
 
 <PageHeader
-  eyebrow="About Ashbright"
   title={positioning.aboutHeading}
   breadcrumb={[{ label: 'About' }]}
 />
@@ -92,7 +91,7 @@
       <p class="eyebrow">Founders</p>
       <h2 id="founders-title">{home.foundersTitle}</h2>
     </div>
-    <div class="grid" style:--grid-min-item-size="20rem" style:--gutter="var(--space-l)">
+    <div class="grid" style:--grid-min-item-size="28rem" style:--grid-placement="auto-fit" style:--gutter="var(--space-xl)">
       {#each people as person}
         <PersonCard {person} />
       {/each}

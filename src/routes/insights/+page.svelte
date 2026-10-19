@@ -11,7 +11,7 @@
 
 <Seo title="Insights" description="Insights from Ashbright." noindex={empty} />
 
-<PageHeader eyebrow="Insights" title="Insights" breadcrumb={[{ label: 'Insights' }]} />
+<PageHeader title="Insights" breadcrumb={[{ label: 'Insights' }]} />
 
 <section class="region">
   <div class="wrapper">

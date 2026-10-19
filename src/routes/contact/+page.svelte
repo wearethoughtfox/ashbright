@@ -24,7 +24,6 @@
 />
 
 <PageHeader
-  eyebrow="Contact"
   title="Get in touch."
   breadcrumb={[{ label: 'Contact' }]}
 />

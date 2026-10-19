@@ -28,7 +28,6 @@
 />
 
 <PageHeader
-  eyebrow="Sector"
   title={sector.title}
   lede={sector.short}
   breadcrumb={[{ label: 'Sectors', href: '/sectors' }, { label: sector.title }]}

@@ -31,7 +31,6 @@
 />
 
 <PageHeader
-  eyebrow="Situation"
   title={situation.title}
   image={situation.image}
   imageAlt={situation.imageAlt}

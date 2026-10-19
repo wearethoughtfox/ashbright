@@ -14,6 +14,9 @@
   import { sectors } from '$lib/content/sectors.js';
   import { people } from '$lib/content/people.js';
 
+  /** Section label counts, e.g. 4 → "004" */
+  const count = (items) => String(items.length).padStart(3, '0');
+
   const serviceArt = {
     'audience-intelligence': 'rings',
     'strategy-and-planning': 'fan',
@@ -41,19 +44,16 @@
 <section class="hero" aria-labelledby="hero-title">
   <WaveField variant="hero" />
   <div class="wrapper hero__inner">
-    <div class="stack" style:--stack-space="var(--space-l)">
-      <p class="eyebrow">{home.hero.eyebrow}</p>
-      <h1 id="hero-title" class="hero__title">{home.hero.title}</h1>
-      <p class="lede hero__lede">{home.hero.lede}</p>
-      <div class="cluster" style:--gutter="var(--space-s)">
-        <Button href={site.cta.href}>{site.cta.label}</Button>
-        <Button href="/about#how-we-work" variant="ghost">How we work</Button>
+    <div class="hero__body">
+      <div class="stack" style:--stack-space="var(--space-l)">
+        <p class="eyebrow">{home.hero.eyebrow}</p>
+        <h1 id="hero-title" class="hero__title">{home.hero.title}</h1>
+        <p class="lede hero__lede">{home.hero.lede}</p>
+        <div>
+          <Button href="/about#how-we-work">How we work</Button>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="hero__foot wrapper">
-    <p class="hero__meta">{home.hero.strip}</p>
-    <p class="hero__meta">Est. {site.founded}</p>
   </div>
 </section>
 
@@ -61,8 +61,13 @@
 <section class="region" data-surface="light" aria-labelledby="what-title">
   <div class="wrapper">
     <div class="what-we-do">
-      <h2 id="what-title">{home.whatWeDo.title}</h2>
-      <p class="lede">{home.whatWeDo.text}</p>
+      <div class="what-we-do__text">
+        <h2 id="what-title">{home.whatWeDo.title}</h2>
+        <p class="lede">{home.whatWeDo.text}</p>
+      </div>
+      <div class="what-we-do__action">
+        <Button href={site.cta.href}>{site.cta.label}</Button>
+      </div>
     </div>
   </div>
 </section>
@@ -70,7 +75,7 @@
 <!-- SERVICES -->
 <section class="region blueprint" aria-labelledby="services-title">
   <div class="wrapper stack" style:--stack-space="var(--space-l)">
-    <SectionLabel label="Services" note="004" />
+    <SectionLabel label="Services" note={count(services)} />
     <div class="section-head section-head--split">
       <h2 id="services-title">{home.servicesTitle}</h2>
       <Button href="/services" variant="ghost">All services</Button>
@@ -94,7 +99,7 @@
 <!-- SITUATIONS -->
 <section class="region" data-surface="light" aria-labelledby="situations-title">
   <div class="wrapper stack" style:--stack-space="var(--space-l)">
-    <SectionLabel label="Situations" note="006" />
+    <SectionLabel label="Situations" note={count(situations)} />
     <div class="section-head section-head--split">
       <h2 id="situations-title">{home.situationsTitle}</h2>
       <Button href="/situations" variant="ghost">All situations</Button>
@@ -117,14 +122,15 @@
 
 <!-- SECTORS -->
 <section class="region" aria-labelledby="sectors-title">
-  <div class="wrapper stack" style:--stack-space="var(--space-l)">
-    <div class="section-head">
-      <SectionLabel label="Sectors" note="010" />
+  <div class="wrapper stack" style:--stack-space="var(--space-xl)">
+    <div class="stack" style:--stack-space="var(--space-l)">
+      <SectionLabel label="Sectors" note={count(sectors)} />
       <h2 id="sectors-title">{home.sectorsTitle}</h2>
     </div>
-    <ul role="list" class="cluster pills" style:--gutter="var(--space-xs)">
+    <!-- A grid of names, as on the 2017 site (two rows of five on desktop) -->
+    <ul role="list" class="sector-list">
       {#each sectors as sector}
-        <li><a class="pill" href="/sectors/{sector.slug}">{sector.title}</a></li>
+        <li><a href="/sectors/{sector.slug}">{sector.title}</a></li>
       {/each}
     </ul>
   </div>
@@ -133,14 +139,15 @@
 <!-- FOUNDERS -->
 <section class="region" data-surface="light" aria-labelledby="people-title">
   <div class="wrapper stack" style:--stack-space="var(--space-xl)">
-    <div class="section-head section-head--split">
-      <div class="stack" style:--stack-space="var(--space-xs)">
-        <SectionLabel label="Founders" />
+    <!-- Same structure as Services: full-width label, then heading and link -->
+    <div class="stack" style:--stack-space="var(--space-l)">
+      <SectionLabel label="Founders" note={count(people)} />
+      <div class="section-head section-head--split">
         <h2 id="people-title">{home.foundersTitle}</h2>
+        <Button href="/about" variant="ghost">About Ashbright</Button>
       </div>
-      <Button href="/about" variant="ghost">About Ashbright</Button>
     </div>
-    <div class="grid" style:--grid-min-item-size="20rem" style:--gutter="var(--space-l)">
+    <div class="grid" style:--grid-min-item-size="28rem" style:--grid-placement="auto-fit" style:--gutter="var(--space-xl)">
       {#each people as person}
         <PersonCard {person} />
       {/each}
@@ -168,7 +175,21 @@
     z-index: 1;
     flex: 1;
     display: flex;
+    flex-direction: column;
+  }
+
+  .hero__body {
+    flex: 1;
+    display: flex;
     align-items: center;
+  }
+
+  /* Below the nav breakpoint, line the hero up with the sections below.
+     Wider screens keep the centred hero column. */
+  @media (max-width: 55.99rem) {
+    .hero__inner {
+      width: 100%;
+    }
   }
 
   .hero__title {
@@ -181,12 +202,6 @@
   }
 
   .hero__foot {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: var(--space-s);
     margin-block-start: var(--space-xl);
   }
 
@@ -199,10 +214,24 @@
     max-width: unset;
   }
 
+  /* Text left, call to action right; the button drops below on narrow screens */
   .what-we-do {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-l);
+  }
+
+  .what-we-do__text {
     display: grid;
     gap: var(--space-m);
+    flex: 1 1 32rem;
     max-width: 60rem;
+  }
+
+  .what-we-do__action {
+    flex: 0 0 auto;
   }
 
   .what-we-do h2 {
@@ -223,22 +252,62 @@
     gap: var(--space-m);
   }
 
-  .pill {
-    display: inline-block;
-    padding: 0.55em 1em;
-    border: var(--stroke);
-    border-radius: 999px;
-    font-family: var(--font-display);
-    font-size: var(--size-step-00);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--on-surface-heading);
-    text-decoration: none;
-    transition: border-color var(--transition-base), color var(--transition-base), background var(--transition-base);
+  /* The global [role='list'][class] reset zeroes list margins, which cancelled
+     the stack spacing under the heading; this selector outranks it. */
+  .stack > .sector-list {
+    margin-block-start: var(--space-xl);
   }
 
-  .pill:hover {
-    border-color: var(--accent);
+  .sector-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
+    column-gap: var(--space-l);
+  }
+
+  .sector-list li {
+    border-block-start: var(--stroke);
+    max-width: unset;
+  }
+
+  .sector-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--space-s);
+    padding-block: var(--space-s) var(--space-m);
+    font-family: var(--font-display);
+    font-size: var(--size-step-1);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    line-height: var(--leading-fine);
+    color: var(--on-surface-heading);
+    text-decoration: none;
+  }
+
+  .sector-list a::after {
+    content: '→';
     color: var(--accent);
+    opacity: 0;
+  }
+
+  .sector-list a:hover,
+  .sector-list a:focus-visible {
+    color: var(--accent);
+  }
+
+  .sector-list a:hover::after,
+  .sector-list a:focus-visible::after {
+    opacity: 1;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .sector-list a,
+    .sector-list a::after {
+      transition: color var(--transition-base), opacity var(--transition-base), transform var(--transition-movement);
+    }
+
+    .sector-list a:hover::after {
+      transform: translateX(0.2em);
+    }
   }
 </style>

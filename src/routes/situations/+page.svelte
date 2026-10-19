@@ -27,7 +27,6 @@
 />
 
 <PageHeader
-  eyebrow="Situations"
   title="Where are you now?"
   breadcrumb={[{ label: 'Situations' }]}
 />
