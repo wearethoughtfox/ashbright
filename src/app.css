@@ -10,7 +10,7 @@
 @import '@thoughtfox/toolkit/layout/compositions/stack.css';
 @import '@thoughtfox/toolkit/layout/compositions/cluster.css';
 @import '$lib/css/compositions/sidebar.css';
-@import '$lib/css/compositions/grid.css';
+@import '@thoughtfox/toolkit/layout/compositions/grid.css';
 @import '@thoughtfox/toolkit/layout/compositions/switcher.css';
 @import '@thoughtfox/toolkit/layout/compositions/cover.css';
 @import '@thoughtfox/toolkit/layout/compositions/center.css';
