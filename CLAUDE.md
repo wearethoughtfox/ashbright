@@ -24,8 +24,8 @@ This project uses **CUBE CSS** (Composition Utility Block Exception) with **Ever
 | Tokens (generated) | `src/lib/css/global/_tokens.generated.css` | Never edit — run `npm run tokens` |
 | Variables | `src/lib/css/global/variables.css` | Manual additions on top of tokens |
 | Global styles | `src/lib/css/global/global-styles.css` | Low-specificity, element selectors |
-| Compositions | `@thoughtfox/toolkit/layout/compositions/*.css`; site copies of `sidebar`, `grid`, `reel` in `src/lib/css/compositions/` | Every Layout patterns — plain class names |
-| Utilities | `@thoughtfox/toolkit/layout/utilities/` (region, visually-hidden); `src/lib/css/utilities/` (text, technical) | Single-purpose classes |
+| Compositions | `@thoughtfox/toolkit/layout/compositions/*.css` | Every Layout patterns — plain class names |
+| Utilities | `@thoughtfox/toolkit/layout/utilities/` (region, visually-hidden), `@thoughtfox/toolkit/type/utilities/text-legacy.css`; site additions in `src/lib/css/utilities/` (text, technical) | Single-purpose classes |
 | Blocks | Scoped `<style>` in `.svelte` files | Component-specific styles |
 
 ### CUBE layers summary
@@ -80,7 +80,7 @@ The components set CSS custom properties via `style:--prop={value}`. The CSS cla
 
 ## Accessibility conventions
 
-- `SkipLink` is the first element in `+layout.svelte`
+- `SkipLink` (from `@thoughtfox/toolkit/layout`) is the first element in `+layout.svelte`
 - Every `<nav>` has a unique `aria-label`
 - Focus moves to `<h1>` on route change (via `afterNavigate` in `+layout.svelte`)
 - `<ul>` and `<ol>` with list styles removed use `role="list"`
