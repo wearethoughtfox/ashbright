@@ -20,12 +20,12 @@ This project uses **CUBE CSS** (Composition Utility Block Exception) with **Ever
 
 | Layer | Location | Rule |
 |---|---|---|
-| Reset | `src/lib/css/global/reset.css` | Global, never override |
+| Reset | `@thoughtfox/toolkit/layout/reset.css` | Global, never override |
 | Tokens (generated) | `src/lib/css/global/_tokens.generated.css` | Never edit — run `npm run tokens` |
 | Variables | `src/lib/css/global/variables.css` | Manual additions on top of tokens |
 | Global styles | `src/lib/css/global/global-styles.css` | Low-specificity, element selectors |
-| Compositions | `src/lib/css/compositions/*.css` | Every Layout patterns — plain class names |
-| Utilities | `src/lib/css/utilities/*.css` | Single-purpose classes |
+| Compositions | `@thoughtfox/toolkit/layout/compositions/*.css` | Every Layout patterns — plain class names |
+| Utilities | `@thoughtfox/toolkit/layout/utilities/` (region, visually-hidden), `@thoughtfox/toolkit/type/utilities/text-legacy.css`; site additions in `src/lib/css/utilities/` (text, technical) | Single-purpose classes |
 | Blocks | Scoped `<style>` in `.svelte` files | Component-specific styles |
 
 ### CUBE layers summary
@@ -58,7 +58,7 @@ Token files:
 
 Each layout pattern is both:
 1. A plain CSS class — use directly in markup: `<div class="cluster">`
-2. A Svelte component — use for prop-based configuration: `<Cluster gap="var(--space-l)">`
+2. A Svelte component from `@thoughtfox/toolkit/layout` — use for prop-based configuration: `<Cluster gap="var(--space-l)">`
 
 The components set CSS custom properties via `style:--prop={value}`. The CSS class defines the behaviour; the custom property overrides the default.
 
@@ -80,7 +80,7 @@ The components set CSS custom properties via `style:--prop={value}`. The CSS cla
 
 ## Accessibility conventions
 
-- `SkipLink` is the first element in `+layout.svelte`
+- `SkipLink` (from `@thoughtfox/toolkit/layout`) is the first element in `+layout.svelte`
 - Every `<nav>` has a unique `aria-label`
 - Focus moves to `<h1>` on route change (via `afterNavigate` in `+layout.svelte`)
 - `<ul>` and `<ol>` with list styles removed use `role="list"`
