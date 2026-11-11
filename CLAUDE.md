@@ -24,7 +24,7 @@ This project uses **CUBE CSS** (Composition Utility Block Exception) with **Ever
 | Tokens (generated) | `src/lib/css/global/_tokens.generated.css` | Never edit — run `npm run tokens` |
 | Variables | `src/lib/css/global/variables.css` | Manual additions on top of tokens |
 | Global styles | `src/lib/css/global/global-styles.css` | Low-specificity, element selectors |
-| Compositions | `@thoughtfox/toolkit/layout/compositions/*.css` | Every Layout patterns — plain class names |
+| Compositions | `@thoughtfox/toolkit/layout/compositions/*.css`, except the grid: `src/lib/css/compositions/grid.css` is the site's own (its `thirds` preset keeps two columns on tablets) | Every Layout patterns — plain class names |
 | Utilities | `@thoughtfox/toolkit/layout/utilities/` (region, visually-hidden), `@thoughtfox/toolkit/type/utilities/text-legacy.css`; site additions in `src/lib/css/utilities/` (text, technical) | Single-purpose classes |
 | Blocks | Scoped `<style>` in `.svelte` files | Component-specific styles |
 

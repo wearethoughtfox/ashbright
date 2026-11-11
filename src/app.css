@@ -8,7 +8,9 @@
 @import '@thoughtfox/toolkit/layout/compositions/stack.css';
 @import '@thoughtfox/toolkit/layout/compositions/cluster.css';
 @import '@thoughtfox/toolkit/layout/compositions/sidebar.css';
-@import '@thoughtfox/toolkit/layout/compositions/grid.css';
+/* The site's own grid: the toolkit's thirds preset stacks below 52rem,
+   which would turn the two-column situations cards on tablets into one. */
+@import '$lib/css/compositions/grid.css';
 @import '@thoughtfox/toolkit/layout/compositions/switcher.css';
 @import '@thoughtfox/toolkit/layout/compositions/cover.css';
 @import '@thoughtfox/toolkit/layout/compositions/center.css';
