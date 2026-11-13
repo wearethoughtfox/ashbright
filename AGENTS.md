@@ -43,6 +43,9 @@ Edit JSON files in `src/lib/design-tokens/`, then regenerate:
 npm run tokens
 ```
 
+In dev the toolkit's Vite plugin (`tokens/vite-plugin.js`) watches the JSON files and regenerates on
+save, so `npm run tokens` is only needed outside a dev server.
+
 This writes `_tokens.generated.css` with all `--color-*`, `--space-*`, `--size-step-*`, `--leading-*`, `--font-*` custom properties.
 
 Token files:
@@ -82,10 +85,25 @@ The components set CSS custom properties via `style:--prop={value}`. The CSS cla
 
 - `SkipLink` (from `@thoughtfox/toolkit/layout`) is the first element in `+layout.svelte`
 - Every `<nav>` has a unique `aria-label`
-- Focus moves to `<h1>` on route change (via `afterNavigate` in `+layout.svelte`)
+- Focus is **meant** to move to the `<h1>` on route change, but does not. `+layout.svelte` wraps
+  `afterNavigate` in `onMount`, and that never registers: `afterNavigate` wraps its own body in
+  `onMount`, so the inner call runs after the mount phase. `@thoughtfox/toolkit/layout/focus-heading.js`
+  does it properly and also uses `preventScroll: true`, skips hash navigations and preserves an
+  existing `tabindex`. Switching to it is a real behaviour change — test it in a browser first
 - `<ul>` and `<ol>` with list styles removed use `role="list"`
 - Interactive elements are always `<button>` (action) or `<a>` (navigation) — never divs
 - Color contrast: minimum 4.5:1 for body text
+
+## SEO
+
+`<Seo>` wraps `@thoughtfox/toolkit/seo/Head.svelte` and keeps this site's three policies as props: no
+trailing slash on canonicals, `"Title, Site"` for `og:title`, and `noindex` everywhere except Netlify
+production builds (`CONTEXT=production`, or `INDEXABLE=true`). Everything else — `<title>`, description,
+canonical, OG, Twitter and JSON-LD escaping — is the toolkit's `buildHead()`.
+
+`sitemap.xml`, `robots.txt` and `llms.txt` are built by `sitemapXml()`, `robotsTxt()` and `llmsTxt()` from
+`@thoughtfox/toolkit/seo`. The sitemap sets `lastmod` only on pages with a real date (an insight). It used
+to stamp the build date on every page, which told crawlers the whole site changed on every deploy.
 
 ## Animations
 

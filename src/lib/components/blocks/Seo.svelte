@@ -1,19 +1,9 @@
 <script>
-  import { page } from '$app/stores';
+  // The head tags come from the toolkit. This keeps the site's own policy:
+  // no trailing slash, "Title, Site" for sharing, and noindex everywhere
+  // except Netlify production builds.
+  import Head from '@thoughtfox/toolkit/seo/Head.svelte';
   import { site } from '$lib/content/site.js';
-
-  /** @type {string|undefined} Page title (site name appended automatically) */
-  export let title = undefined;
-  /** @type {string} */
-  export let description = site.description;
-  /** @type {string} Absolute or root-relative image path */
-  export let image = site.ogImage;
-  /** @type {'website'|'article'|'profile'} */
-  export let type = 'website';
-  /** @type {object|object[]|undefined} JSON-LD to embed */
-  export let jsonLd = undefined;
-  /** @type {boolean} */
-  export let noindex = false;
 
   /**
    * Search engines may only index Netlify production builds. Branch deploys,
@@ -22,35 +12,13 @@
   // eslint-disable-next-line no-undef
   const indexable = __INDEXABLE__;
 
-  $: fullTitle = title ? `${title} | ${site.name}` : `${site.name} | ${site.tagline}`;
-  $: path = $page.url.pathname.replace(/\/$/, '') || '';
-  $: canonical = `${site.url}${path === '' ? '/' : path}`;
-  $: ogImage = image.startsWith('http') ? image : `${site.url}${image}`;
-  $: ld = jsonLd
-    ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd])
-        .map((o) => JSON.stringify(o).replace(/</g, '\\u003c'))
-        .map((json) => `<script type="application/ld+json">${json}<\/script>`)
-        .join('\n')
-    : '';
+  const titles = {
+    document: (title) => (title ? `${title} | ${site.name}` : `${site.name} | ${site.tagline}`),
+    social: (title) => (title ? `${title}, ${site.name}` : `${site.name}, ${site.tagline}`)
+  };
+
+  /** title, description, image, type, jsonLd, noindex: see buildHead() in the toolkit */
+  let props = $props();
 </script>
 
-<svelte:head>
-  <title>{fullTitle}</title>
-  <meta name="description" content={description} />
-  <link rel="canonical" href={canonical} />
-  {#if noindex || !indexable}
-    <meta name="robots" content="noindex, nofollow" />
-  {/if}
-  <meta property="og:site_name" content={site.name} />
-  <meta property="og:type" content={type} />
-  <meta property="og:title" content={title ? `${title}, ${site.name}` : `${site.name}, ${site.tagline}`} />
-  <meta property="og:description" content={description} />
-  <meta property="og:url" content={canonical} />
-  <meta property="og:image" content={ogImage} />
-  <meta property="og:locale" content="en_GB" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={fullTitle} />
-  <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={ogImage} />
-  {@html ld}
-</svelte:head>
+<Head {site} {titles} {indexable} trailingSlash="never" {...props} />
