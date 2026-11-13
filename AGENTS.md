@@ -85,11 +85,12 @@ The components set CSS custom properties via `style:--prop={value}`. The CSS cla
 
 - `SkipLink` (from `@thoughtfox/toolkit/layout`) is the first element in `+layout.svelte`
 - Every `<nav>` has a unique `aria-label`
-- Focus is **meant** to move to the `<h1>` on route change, but does not. `+layout.svelte` wraps
-  `afterNavigate` in `onMount`, and that never registers: `afterNavigate` wraps its own body in
-  `onMount`, so the inner call runs after the mount phase. `@thoughtfox/toolkit/layout/focus-heading.js`
-  does it properly and also uses `preventScroll: true`, skips hash navigations and preserves an
-  existing `tabindex`. Switching to it is a real behaviour change — test it in a browser first
+- Focus moves to the `<h1>` on route change, via `afterNavigate(focusHeading())` from
+  `@thoughtfox/toolkit/layout/focus-heading.js`. **Call `afterNavigate` at the top level of the
+  script, never inside `onMount`** — a lifecycle function registered from inside `onMount` is
+  dropped without an error, which is how this site went a long time with it silently doing nothing.
+  `focusHeading()` does nothing on first load or when the URL has a `#hash` (SvelteKit handles that
+  itself), and it never scrolls, so anchor jumps and Back's scroll restoration both still work
 - `<ul>` and `<ol>` with list styles removed use `role="list"`
 - Interactive elements are always `<button>` (action) or `<a>` (navigation) — never divs
 - Color contrast: minimum 4.5:1 for body text
